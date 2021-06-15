@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-04-18T18:02:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dept7" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88dd4268-108d-4ee3-9b26-ea10da03089e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+	<parameter name="dept_id1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from empdata, mdata, masgndata 
+where mdata.fklid=masgndata.fklid 
+and masgndata.id=empdata.id 
+and mdata.dept_id =$P{dept_id1}]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="emp_name" class="java.lang.String"/>
+	<field name="emp_designation" class="java.lang.String"/>
+	<field name="dept" class="java.lang.String"/>
+	<field name="date" class="java.sql.Timestamp"/>
+	<field name="fklid" class="java.lang.String"/>
+	<field name="dept_id" class="java.lang.String"/>
+	<field name="ip" class="java.lang.String"/>
+	<field name="hdd" class="java.lang.String"/>
+	<field name="mboard" class="java.lang.String"/>
+	<field name="ram" class="java.lang.String"/>
+	<field name="img_date" class="java.lang.String"/>
+	<field name="img_loc" class="java.lang.String"/>
+	<field name="chip" class="java.lang.String"/>
+	<field name="mtype" class="java.lang.String"/>
+	<field name="pid" class="java.lang.Integer"/>
+	<field name="COLUMN_17" class="java.lang.String"/>
+	<field name="COLUMN_18" class="java.lang.String"/>
+	<field name="COLUMN_19" class="java.lang.String"/>
+	<field name="mid" class="java.lang.String"/>
+	<field name="pcstatus" class="java.lang.String"/>
+	<field name="nstatus" class="java.lang.String"/>
+	<field name="asgn_update_date" class="java.sql.Timestamp"/>
+	<field name="handover_date" class="java.lang.String"/>
+	<field name="COLUMN_25" class="java.lang.Integer"/>
+	<field name="inactive" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="106" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="183" y="21" width="397" height="20" uuid="a3d54ece-61a8-4560-a562-230240531b9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAKIR KNITWARES LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="81" width="73" height="20" uuid="b0386c3f-24bc-409a-b86b-ee09fa68bca5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Machine : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="36" width="600" height="25" uuid="b24ab9ff-6ddd-4364-a910-ce384bc58bfe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT WISE IT INVENTORY RECORDS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="356" y="0" width="50" height="35" uuid="b126932c-1155-4019-a023-ed8d57202bf1"/>
+				<imageExpression><![CDATA["C:/Users/Dell/Desktop/pix/img.gif"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="350" y="60" width="97" height="20" uuid="9dc73115-cb4a-4dff-8202-98566140755b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dept_id1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

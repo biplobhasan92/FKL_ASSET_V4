@@ -1,0 +1,490 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <constant name = "struts.devMode" value = "false" />
+    <constant name = "struts.multipart.maxSize" value = "1000000" />
+    
+    <package name="default" extends="struts-default">
+
+        <interceptors>
+            <interceptor class="com.fk.login.AdminInterceptor"
+                         name="loginInterceptor">
+            </interceptor>
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="loginInterceptor" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+
+
+        
+        <action name="login" class="com.fk.action.AdminAction" method="login">
+            <result name="success" >/addM.jsp</result>
+            <result name="fail" >/index2.jsp</result>
+        </action>
+        
+        
+        <action name="logout" class="com.fk.action.AdminAction" method="logout">
+            <result name="success" >/index.jsp</result>
+        </action>
+        
+        
+
+        
+        
+        <action name="createUser" class="com.fk.action.MenuAction" method="createUser">
+            <result name="success" >/createUser.jsp</result>
+        </action>
+        
+        
+        <action name="saveAdmn" class="com.fk.action.userAction" method="saveAdmn">
+            <result name="success" >/createUserSucc.jsp</result>
+            <result name="fail" >/createUserErr.jsp</result>
+        </action>
+        
+       
+        <action name="searchAdmn" class="com.fk.action.userAction" method="searchAdmn">
+            <result name="success" >/createUser.jsp</result>
+            <result name="fail" >/createUserErr.jsp</result>
+        </action>
+        
+        
+        
+        <action name="upAdmn" class="com.fk.action.userAction" method="upAdmn">
+            <result name="success" >/createUserSucc.jsp</result>
+            <result name="fail" >/createUserErr.jsp</result>
+        </action>
+        
+        <action name="cgPass" class="com.fk.action.userAction" method="cgPass">
+            <result name="success" >/createUserSucc.jsp</result>
+            <result name="fail" >/createUserErr.jsp</result>
+        </action>
+        
+        
+        <action name="searchEntry" class="com.fk.action.MenuAction" method="searchEntry">
+            <result name="success">searchEntry.jsp</result>
+        </action>
+        
+        
+        <action name="viewReport" class="com.fk.action.ReportAction" method="showReport">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="viewReportex" class="com.fk.action.ReportAction" method="showReportex">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        
+        <action name="allProductReport" class="com.fk.action.ReportAction" method="allProductReport">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="assetTopSheet" class="com.fk.action.ReportAction" method="assetTopSheet">
+            <result name="success">report.jsp</result>
+        </action>
+        
+                
+        <action name="allITAsset" class="com.fk.action.ReportAction" method="allITAsset">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="productReport" class="com.fk.action.ReportAction" method="productReport">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="showReport2" class="com.fk.action.ReportAction" method="showReport2">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="showReport3" class="com.fk.action.ReportAction" method="showReport3">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        <action name="showReport4" class="com.fk.action.ReportAction" method="showReport6">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="showReport7" class="com.fk.action.ReportAction" method="testFunctionOfSubDepartmant">
+            <result name="success">report.jsp</result> 
+        </action>
+        
+        
+        <action name="openReport" class="com.fk.action.MenuAction" method="openReport">
+            <result name="success">report.jsp</result>
+        </action>
+        
+        
+        <action name="showSubdept" class="com.fk.action.MenuAction" method="subDeptList">
+            <result name="success">report1.jsp</result>
+        </action>
+        
+        <action name="updateData" class="com.fk.action.EmpAction" method="updateData">
+            <result name="success">/searchEntry.jsp</result>
+        </action>
+        
+        
+        <action name="getDeletingData" class="com.fk.action.EmpAction" method="getDeletingData">
+            <result name="success">/deleteEntry.jsp</result>
+        </action>
+        
+        <action name="deleteMdata" class="com.fk.action.EmpAction" method="deleteMdata">
+            <result name="success">/deleteEntry.jsp</result>   
+        </action>
+        
+        
+        <action name="deleteMdata" class="com.fk.action.EmpAction" method="deleteMdata">
+            <result name="success">/deleteEntrySucc.jsp</result>
+            <result name="fail">/deleteEntryErr.jsp</result>
+        </action>
+        
+        
+        <action name="deletePdata" class="com.fk.action.EmpAction" method="deletePdata">
+            <result name="success">/deleteEntryPSucc.jsp</result>
+            <result name="fail">/deleteEntryPErr.jsp</result>
+        </action>
+                                
+        
+        <action name="updateEntry" class="com.fk.action.EmpAction" method="updateEntry3">
+            <result name="success">/searchEntrySucc.jsp</result>
+            <result name="fail">/searchEntryErr.jsp</result>
+        </action>
+        
+        
+        <action name="updateEntryP" class="com.fk.action.EmpAction" method="updateEntryP3">
+            <result name="success">/searchEntryPSucc.jsp</result>
+            <result name="fail">/searchEntryPErr.jsp</result>
+        </action>
+        
+        
+        <action name="searchData" class="com.fk.action.EmpAction" method="searchData">
+            <result name="success">/searchEntry.jsp</result>
+            <result name="fail">/view.jsp</result>
+            <result name="error">/searchEntryErr.jsp</result>
+        </action>
+        
+        <action name="Mupdate" class="com.fk.action.MenuAction" method="Mupdate">
+            <result name="success" >/searchM.jsp</result>
+        </action>
+        
+        <action name="searchM" class="com.fk.action.EmpAction" method="searchM">
+            <result name="success" >/searchM.jsp</result>
+            <result name="fail" >/searchM.jsp</result>
+        </action>
+        
+        <action name="updateM" class="com.fk.action.EmpAction" method="updateM">
+            <result name="success" >/searchM.jsp</result>
+            <result name="fail" >/searchM.jsp</result>
+        </action>
+        
+        
+        <action name="upM" class="com.fk.action.MenuAction" method="upM">
+            <result name="success" >/mbuy.jsp</result>
+        </action>
+        
+        <action name="searchM2" class="com.fk.action.EmpAction" method="searchM2">
+            <result name="success" >/searchM.jsp</result>
+            <result name="fail" >/searchM.jsp</result>
+        </action>
+        
+        
+        <action name="searchM3" class="com.fk.action.EmpAction" method="searchM3">
+            <result name="success" >/addM2.jsp</result>
+            <result name="fail" >/addM.jsp</result>
+        </action>
+        
+        
+        <action name="addM" class="com.fk.action.MenuAction" method="addM">
+            <result name="success" >/addM.jsp</result>
+        </action>
+        
+        <action name="addM2" class="com.fk.action.MenuAction" method="addM2">
+            <result name="success" >/addM2.jsp</result>
+        </action>
+        
+        
+        <action name="newEmp" class="com.fk.action.MenuAction" method="newEmp">
+            <result name="success" >/addEmp.jsp</result>
+        </action>
+        
+        
+        
+        <action name="addAttach" class="com.fk.action.MenuAction" method="addAttach"> 
+            <result name="success">/addAttach.jsp</result>
+        </action>
+        
+        
+        <action name="loadAttach" class="com.fk.action.RetrieveIamgesAction" >
+            <result name="success">/addAttachSucc.jsp</result>
+        </action>
+        
+        
+        <action name="testUpload" class="com.fk.action.UploadAction" method="testUpload">
+            <result name="success" type="redirectAction">loadAttach</result>
+            <result name="fail" >/addAttachFailed.jsp</result>
+        </action>
+        
+        
+        <action name="deletingAttachment" class="com.fk.action.UploadAction" method="deletingAttachment"> 
+            <result name="success" type="redirectAction">loadAttach</result>
+            <result name="fail" type="redirectAction">loadAttach</result>
+        </action>
+        
+
+        <action name="saveM" class="com.fk.action.EmpAction" method="saveM"> 
+            <result name="success">/addMSucc.jsp</result>
+            <result name="fail">/addMErr.jsp</result>
+            <result name="error">/addEmp2.jsp</result>
+        </action>
+        
+        
+        
+        <action name="saveM1" class="com.fk.action.EmpAction" method="saveM1">
+            <result name="success" >/addM2.jsp</result>
+            <result name="fail" >/addM.jsp</result>
+            <result name="error" >/addEmp.jsp</result>
+        </action>
+        
+        <action name="saveEmp" class="com.fk.action.EmpAction" method="saveEmp">
+            <result name="success" >/addEmpSucc.jsp</result>
+            <result name="fail" >/addEmpErr.jsp</result>
+        </action>
+        
+        <action name="searchEmp" class="com.fk.action.EmpAction" method="searchEmp">
+            <result name="success" >/addEmpSearchData.jsp</result>
+            <result name="fail" >/addEmp.jsp</result>
+        </action>
+        
+        <action name="upEmp" class="com.fk.action.EmpAction" method="upEmp">
+            <result name="success" >/addEmpSucc.jsp</result>
+            <result name="fail" >/addEmpErr.jsp</result>
+        </action>
+        
+        <action name="updateProduct" class="com.fk.action.EmpAction" method="updateProduct">
+            <result name="success">/mbuySucc.jsp</result>
+            <result name="fail">/mbuyErr.jsp</result>
+        </action>
+        
+        <action name="searchProduct" class="com.fk.action.EmpAction" method="searchProduct">
+            <result name="success">/mbuy.jsp</result>
+            <result name="fail">/mbuyErr.jsp</result>
+        </action>
+        
+        <action name="showPrinter" class="com.fk.action.EmpAction" method="viewPrinter">
+            <result name="success" >/viewP.jsp</result>
+        </action>
+        
+        <action name="showPerson" class="com.fk.action.EmpAction" method="viewPerson">
+            <result name="success">/view.jsp</result>
+        </action>
+        
+        <action name="updatePrinterData" class="com.fk.action.EmpAction" method="updatePrinterData">
+            <result name="success">/searchEntryP.jsp</result>
+        </action>
+        
+        
+        <action name="getDeletingPrntrData" class="com.fk.action.EmpAction" method="getDeletingPrntrData">
+            <result name="success">/deleteEntryP.jsp</result>
+        </action>
+        
+        
+        
+        <action name="showReportHis1" class="com.fk.action.ReportAction" method="showReportHis1">
+            <result name="success">reportHis.jsp</result> 
+        </action>
+        
+        
+        <action name="showReportHis2" class="com.fk.action.ReportAction" method="showReportHis2">
+            <result name="success">reportHis.jsp</result> 
+        </action>
+      
+        
+        
+        <action name="openHisReport" class="com.fk.action.MenuAction" method="openHisReport">
+            <result name="success">reportHis.jsp</result> 
+        </action> 
+        
+        
+        <action name="machineReport" class="com.fk.action.MenuAction" method="machineReport">
+            <result name="success">viewAllMachineRpt.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="changePass" class="com.fk.action.MenuAction" method="changePass">
+            <result name="success">createUser.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="deleteEmp" class="com.fk.action.EmpAction" method="deleteEmp">
+            <result name="success" >/addEmpSucc.jsp</result>
+            <result name="fail" >/addEmpErr.jsp</result>
+        </action>
+        
+        
+        <action name="settings" class="com.fk.action.MenuAction" method="settings">  
+            <result name="success" >/settings.jsp</result>
+        </action>
+        
+        
+        <action name="saveNewDept" class="com.fk.action.EmpAction" method="saveDeptSettings">
+            <result name="success" >/settings.jsp</result>
+            <result name="fail" >/settings.jsp</result>
+        </action>
+        
+        
+        
+        <action name="saveNewItem" class="com.fk.action.EmpAction" method="saveMtypeSettings">
+            <result name="success" >/settings.jsp</result>
+            <result name="fail" >/settings.jsp</result>
+        </action>
+        
+        <action name="getTagData" class="com.fk.action.EmpAction" method="getTagData">
+            <result name="success" >/tagView.jsp</result>
+            <result name="fail" >/index.jsp</result>
+        </action>
+
+
+        <!--        FKL IP  CHECK  ACTION      -->
+        <action name="check_ip" class="com.fk.action.IpCheckAction" method="check_ip">  
+            <result name="success" >/ip_list_withVlan.jsp</result>
+        </action>
+        
+        
+        <!--        FKL Operation Log History      -->
+        <action name="log_history" class="com.fk.action.LogHistoryAction" method="log_history">
+            <result name="success" >/LogHistory.jsp</result>
+        </action>
+                        
+        
+        
+        
+        <action name="viewTableIpVlan100" class="com.fk.action.IpCheckAction" method="viewTableIpVlan100">
+            <result name="success" >/ip_list_withVlan.jsp</result>
+        </action>
+        
+        <action name="saveIpVan100" class="com.fk.action.IpCheckAction" method="saveIpVan100">
+            <result name="success" >/ip_list_withVlan.jsp</result>
+            <result name="input" >/ip_list_withVlan.jsp</result>
+        </action>
+
+        <action name="updateIpVlanTable" class="com.fk.action.IpCheckAction" method="updateIpVlanTable">
+            <result name="success" >/ip_list_withVlan.jsp</result>
+            <result name="input" >/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIp" class="com.fk.action.IpCheckAction" method="editePageIpUpdateCheck">
+            <result name="success">/ip_list_withVlan.jsp</result>
+        </action>
+
+        <action name="updateIpData100" class="com.fk.action.IpCheckAction" method="updateIpData100">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData101" class="com.fk.action.IpCheckAction" method="updateIpData101">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData102" class="com.fk.action.IpCheckAction" method="updateIpData102">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData103" class="com.fk.action.IpCheckAction" method="updateIpData103">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData104" class="com.fk.action.IpCheckAction" method="updateIpData104">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData105" class="com.fk.action.IpCheckAction" method="updateIpData105">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData106" class="com.fk.action.IpCheckAction" method="updateIpData106">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData107" class="com.fk.action.IpCheckAction" method="updateIpData107">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData108" class="com.fk.action.IpCheckAction" method="updateIpData108">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData109" class="com.fk.action.IpCheckAction" method="updateIpData109">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+        
+        <action name="updateIpData110" class="com.fk.action.IpCheckAction" method="updateIpData110">
+            <result name="success">/ip_list_edit.jsp</result>
+        </action>
+
+        <action name="updateIpData192" class="com.fk.action.IpCheckAction" method="updateIpData192">
+            <result name="success">/ip_list_192.jsp</result>
+        </action>
+        
+        <action name="updateIp192" class="com.fk.action.IpCheckAction" method="updateIp192">
+            <result name="success">/ip_list_withVlan.jsp</result>
+        </action>
+        
+        <action name="gotoDemandInputForm" class="com.fk.action.DemandAction" method="gotoDemandInputForm">
+            <result name="success">/demandInput2.jsp</result>
+        </action>
+
+        <action name="getAllDemand" class="com.fk.action.DemandAction" method="getAllDemand">
+            <result name="success">/demandList.jsp</result>
+        </action>
+        
+        <action name="saveDemandNote" class="com.fk.action.DemandAction" method="saveDemandNote">
+            <result name="success" type="redirectAction">getAllDemand</result>
+            <result name="fail">/demandInput2.jsp</result>
+        </action>
+        
+        <action name="editDemandInput" class="com.fk.action.DemandAction" method="gotoEditDemandInput">
+            <result name="success">/editDemandInput.jsp</result>
+        </action>
+        
+        <action name="editDemandNote" class="com.fk.action.DemandAction" method="editDemandNote"> 
+            <result name="success" type="redirectAction">getAllDemand</result>
+            <result name="fail">/editDemandInput.jsp</result>
+        </action>
+        
+        <action name="gotoDescription" class="com.fk.action.DemandAction" method="gotoDescription">
+            <result name="success" type="redirectAction">getAllDescription</result>
+        </action>
+        
+        <action name="getAllDescription" class="com.fk.action.DemandAction" method="getAllDescription">
+            <result name="success">/demandDescription.jsp</result>
+        </action>
+        
+        <action name="addDescription" class="com.fk.action.DemandAction" method="addDescription">
+            <result name="success">/demandDescription.jsp</result>
+        </action>
+        
+        <action name="editDemandDesc" class="com.fk.action.DemandAction" method="editDemandDesc">
+            <result name="success">/demandDescription.jsp</result>
+        </action>
+        
+        <action name="getEditDemandData" class="com.fk.action.DemandAction" method="getEditDemandData">
+            <result name="success">/demandDescription.jsp</result>
+        </action>
+        
+        <action name="testAction" class="com.fk.action.DemandAction" method="testAction">
+            <result name="success">/DemandInputDump.jsp</result>
+        </action>
+    </package>
+</struts>

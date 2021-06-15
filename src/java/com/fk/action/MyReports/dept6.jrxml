@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-04-19T13:32:12 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dept" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5433a9e9-ddb6-400e-9fd5-3d2563eb3477">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="b515137f-9bc7-40a2-933c-6c971139552c">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+		<parameter name="dept2" class="java.lang.String">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA[$P{dept2}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[SELECT count( $P{dept2}) AS dept_c
+FROM  fklit5.empdata,
+  fklit5.mdata ,
+   fklit5.masgndata 
+WHERE 
+	 mdata.fklid = masgndata.fklid 
+	 AND masgndata.id = empdata.id 
+	 AND mdata.dept_id = $P{dept2}]]>
+		</queryString>
+		<field name="dept_c" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="Dataset5" uuid="6758b5a5-f0f8-4183-b8cc-bb24ba1f3c33">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+		<parameter name="dept3" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{dept3}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[select count(mdata.dept_id) as dept_c2 
+from fklit5.deptlist, fklit5.mdata, fklit5.masgndata, fklit5.empdata
+where deptlist.dept=$P{dept3}
+and deptlist.dept=empdata.dept
+and empdata.id=masgndata.id
+and masgndata.fklid=mdata.fklid
+	 
+	 ]]>
+		</queryString>
+		<field name="dept_c2" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="dept" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["CAD"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dept_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from  fklit5.empdata , fklit5.mdata , fklit5.masgndata,  fklit5.main_deptlist 
+where mdata.fklid=masgndata.fklid 
+and masgndata.id=empdata.id 
+and mdata.dept_id = main_deptlist.dept_id
+and mdata.dept_id = $P{dept_id}
+order by mdata.dept_id]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="emp_name" class="java.lang.String"/>
+	<field name="emp_designation" class="java.lang.String"/>
+	<field name="dept" class="java.lang.String"/>
+	<field name="date" class="java.sql.Timestamp"/>
+	<field name="fklid" class="java.lang.String"/>
+	<field name="dept_id" class="java.lang.String"/>
+	<field name="ip" class="java.lang.String"/>
+	<field name="hdd" class="java.lang.String"/>
+	<field name="mboard" class="java.lang.String"/>
+	<field name="ram" class="java.lang.String"/>
+	<field name="img_date" class="java.lang.String"/>
+	<field name="img_loc" class="java.lang.String"/>
+	<field name="chip" class="java.lang.String"/>
+	<field name="mtype" class="java.lang.String"/>
+	<field name="pid" class="java.lang.Integer"/>
+	<field name="COLUMN_17" class="java.lang.String"/>
+	<field name="COLUMN_18" class="java.lang.String"/>
+	<field name="COLUMN_19" class="java.lang.String"/>
+	<field name="mid" class="java.lang.String"/>
+	<field name="pcstatus" class="java.lang.String"/>
+	<field name="nstatus" class="java.lang.String"/>
+	<field name="asgn_update_date" class="java.sql.Timestamp"/>
+	<field name="handover_date" class="java.lang.String"/>
+	<field name="COLUMN_25" class="java.lang.Integer"/>
+	<field name="inactive" class="java.lang.String"/>
+	<field name="COLUMN_27" class="java.lang.String"/>
+	<field name="dept_name" class="java.lang.String"/>
+	<variable name="count" class="java.lang.Integer" resetType="None" calculation="Count">
+		<variableExpression><![CDATA[$F{pid}]]></variableExpression>
+	</variable>
+	<variable name="dept_count" class="java.lang.Integer" resetType="Group" resetGroup="Group2" calculation="Count">
+		<variableExpression><![CDATA[$F{fklid}]]></variableExpression>
+	</variable>
+	<variable name="count_dept." class="java.lang.String" calculation="Count">
+		<variableExpression><![CDATA[$F{fklid}]]></variableExpression>
+	</variable>
+	<group name="Group2" isStartNewPage="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{dept}]]></groupExpression>
+		<groupHeader>
+			<band height="70">
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<rectangle>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="35" width="789" height="35" isPrintInFirstWholeBand="true" printWhenGroupChanges="Group2" forecolor="#FFFFFF" backcolor="#E6E3DC" uuid="c5efaa61-48f5-42c3-98ca-1b60ed632407"/>
+				</rectangle>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="36" width="40" height="34" uuid="7601ffbf-a5d3-441c-8e6f-e282062b2ab4"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="40" y="36" width="69" height="34" uuid="05c9ad11-df65-4e0d-a8fb-617d55a72d3d"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NAME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="109" y="36" width="62" height="34" uuid="be3ef59d-82ca-45b8-b838-5894ab19d405"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DESIGNATION]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="171" y="36" width="48" height="34" uuid="5e651753-328c-4a36-a745-4fbccb4f3718"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MACHINE ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="219" y="36" width="82" height="34" uuid="2352365a-61d0-47f1-a1d1-d3bf45de759c"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[IP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="301" y="36" width="80" height="34" uuid="e7a8d3a2-3abc-4cff-8748-45333d47cec4"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MACHINE TAG NO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="440" y="36" width="34" height="34" uuid="3a88da9f-4623-48b4-9c72-7442decec0d1"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[HARD DISK]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="474" y="36" width="56" height="34" uuid="72b1769c-d6d8-4f0e-9cec-6bde2991a754"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MOTHER BOARD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="530" y="36" width="28" height="34" uuid="8d3f3c96-2c59-477e-9a66-61d93c2e5ff3"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RAM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="558" y="36" width="77" height="34" uuid="0f52d9f1-eb9b-44c8-9e9b-75f0cdc48a12"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROCESSOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="635" y="36" width="50" height="34" uuid="32fa6763-9264-40f7-a17f-9b92791152dc"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[STATUS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="685" y="36" width="50" height="34" uuid="36d15513-46c4-4af1-ba1e-9d8aee3a2ee0"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[INTERNET STATUS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="735" y="36" width="53" height="34" uuid="e01cee5b-1e73-43dc-823b-3c726c1c1985"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement stretchType="RelativeToTallestObject" x="381" y="36" width="59" height="34" uuid="8ab4dd8c-7f29-491d-b7bb-4979807305a4"/>
+					<box>
+						<pen lineWidth="2.0" lineColor="#CFCEC8"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MACHINE TYPE]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="264" y="6" width="100" height="23" printWhenGroupChanges="Group2" uuid="19e4e3c8-b959-47c2-872e-b879b9987e75"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dept}]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement isPrintRepeatedValues="false" x="450" y="2" width="63" height="23" uuid="119f9fec-6fc5-4796-92f4-e93a5f0319b7">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="Dataset5" uuid="d208dc97-1120-4c5f-be9d-ed0d462e853b">
+							<datasetParameter name="dept3">
+								<datasetParameterExpression><![CDATA[$F{dept}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:column width="63" uuid="d32982a3-cdad-471c-b09c-fbd0694512ea">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="63" height="30" uuid="320d89a0-8746-4709-a40c-f0aa7d98f4ab"/>
+									<textElement textAlignment="Left" verticalAlignment="Middle">
+										<font fontName="Times New Roman" size="12" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{dept_c2}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+				<staticText>
+					<reportElement x="365" y="6" width="85" height="23" uuid="8d440204-0264-4f9a-8d9c-571947e34eab"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Machine : ]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band>
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="104" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<image>
+				<reportElement x="356" y="0" width="50" height="35" uuid="522e8656-a1be-42f0-b1c3-94f574b7a440"/>
+				<imageExpression><![CDATA["C:/Users/Dell/Desktop/pix/img.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="183" y="21" width="397" height="20" uuid="5c090663-678a-4e9e-b7dd-9f23a0619bf8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAKIR KNITWARES LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="36" width="600" height="25" uuid="06a5d46c-70b3-4b35-bc36-699f29cef9e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT WISE IT INVENTORY RECORDS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="331" y="60" width="100" height="30" uuid="0fc6c215-2ce1-4d5c-bebb-910201c384a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dept_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="332" y="84" width="88" height="20" uuid="b8959e87-cef5-4d55-9b22-d418f8f11847">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Machine :]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement isPrintRepeatedValues="false" x="418" y="79" width="63" height="25" uuid="18bc7942-d687-4002-9d70-e66b9dc13fd4">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="c559fa03-ae45-4b2a-be7c-e1ba55482e27">
+						<datasetParameter name="dept2">
+							<datasetParameterExpression><![CDATA[$P{dept_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="200" uuid="af4b81fb-fbe9-4363-b25d-6d712e5cf120">
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="200" height="30" uuid="2884c330-c516-43d1-9453-5c08aaa0932f">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dept_c}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="40" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="9961deac-bf08-4b73-a487-d724888baf98"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="40" y="0" width="69" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" printWhenGroupChanges="Group2" uuid="85379e3e-79e3-4865-b792-29f77e82dcb7"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{emp_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="109" y="0" width="62" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="f58782f4-f68c-4b32-814d-a5435f0cbf1a"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{emp_designation}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="171" y="0" width="48" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="3ba5455d-4a24-4157-a02a-8fea952f7b2f"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mid}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="219" y="0" width="82" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="5e918035-f584-47af-9c88-328e6767770b"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ip}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="301" y="0" width="80" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="2f9f8daf-a0fa-4e24-aa66-032d9d258e6d"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fklid}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="381" y="0" width="59" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="13c9f127-c6af-4961-845f-214833a09086"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mtype}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="440" y="0" width="34" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="23ba1ff4-a342-483f-804c-1bc0c4879a96"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{hdd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="474" y="0" width="56" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="16c8fd04-d159-483b-94a5-28b7388417f8"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mboard}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="530" y="0" width="28" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ecf913ba-fdbb-4798-bbd3-b610721546ee"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ram}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="558" y="0" width="77" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="86773a77-3eab-441a-bf6b-45bd2514abc6"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{chip}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="635" y="0" width="50" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="7418b5ff-2634-4dd1-baaa-d73165e53d6b"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{pcstatus}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="685" y="0" width="50" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="2d3c6b13-8476-4304-b19e-c5b5296a8dde"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nstatus}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="735" y="0" width="53" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="8223b275-fe7c-4adf-b694-9f2c43bdcd43"/>
+				<box padding="3">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{handover_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="1" y="3" width="788" height="24" forecolor="#080808" backcolor="#DEDACC" uuid="9c7b890b-c201-466e-b726-f739c6f719fb"/>
+				<textField evaluationTime="Report">
+					<reportElement x="735" y="4" width="40" height="20" forecolor="#121211" uuid="1e96617c-fb6d-4f0a-aa9a-8d6f88c419f8"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="645" y="4" width="80" height="20" forecolor="#121211" uuid="f4148453-425d-42ab-90d3-88cfbf10487e"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="22" y="1" width="197" height="20" forecolor="#0D0D0C" uuid="fcfa8f7b-c366-4b30-8cff-579c9ac740a1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

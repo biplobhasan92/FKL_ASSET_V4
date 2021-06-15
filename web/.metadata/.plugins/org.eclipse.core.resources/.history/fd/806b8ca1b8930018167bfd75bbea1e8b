@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="product1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dbdb7d28-64f0-4156-8303-9a94dfdfaf45">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="pid" class="java.lang.Integer">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[29]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from mbuydata, mdata where mbuydata.pid=mdata.pid and mbuydata.pid=$P{pid}]]>
+	</queryString>
+	<field name="memo" class="java.lang.String"/>
+	<field name="supplier" class="java.lang.String"/>
+	<field name="cost" class="java.lang.String"/>
+	<field name="prdtlife" class="java.lang.Integer"/>
+	<field name="suplrwrnty" class="java.lang.Integer"/>
+	<field name="pid" class="java.lang.Integer"/>
+	<field name="buydate" class="java.sql.Timestamp"/>
+	<field name="remlife" class="java.lang.Integer"/>
+	<field name="expired" class="java.lang.String"/>
+	<field name="fklid" class="java.lang.String"/>
+	<field name="dept_id" class="java.lang.String"/>
+	<field name="ip" class="java.lang.String"/>
+	<field name="hdd" class="java.lang.String"/>
+	<field name="mboard" class="java.lang.String"/>
+	<field name="ram" class="java.lang.String"/>
+	<field name="img_date" class="java.lang.String"/>
+	<field name="img_loc" class="java.lang.String"/>
+	<field name="chip" class="java.lang.String"/>
+	<field name="mtype" class="java.lang.String"/>
+	<field name="COLUMN_20" class="java.lang.Integer"/>
+	<field name="id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="78" y="62" width="400" height="19" uuid="12fe5a95-bd39-4d65-ad62-14cbce70156f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[KAYAMPUR, FATULLAH, NARAYANGONJ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="247" y="4" width="60" height="50" uuid="46d23ec9-10bc-4b3f-a135-da123985b4ab"/>
+				<imageExpression><![CDATA["F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V3/web/MyReports/pattern.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="79" y="32" width="397" height="30" uuid="69c42c0f-9846-4b26-be14-78838c6aba12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAKIR KNITWARES LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="81" width="400" height="16" uuid="e184ebdd-d7cc-438f-87f6-a61823b091d9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(ISO 9001 : 2008,SCR, BSCI, SEDEX,GOTS & OEKO - TEX CERTIFIED COMPANY)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="-23" y="0" width="600" height="30" uuid="f1e67745-915c-4493-bf79-c27826b9b4cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCT RERORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="15" width="170" height="30" uuid="b1c455a8-56dd-429f-8a27-e85030d0bb4f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product ID : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="15" width="100" height="30" uuid="2c3e32ba-eb38-4c2a-a023-d764911ad293"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="344" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="291" y="22" width="202" height="23" uuid="e86d4f8d-f828-4d2c-93e3-ee1e8daca701"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{memo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="45" width="202" height="23" uuid="a6370a6d-d08a-498a-a089-b21fcdb87fd0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="68" width="202" height="23" uuid="6e6b977d-8cea-44cb-b627-92ea70a36c59"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="91" width="202" height="23" uuid="34d818ac-8b6a-454e-961a-a31673441611"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mtype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="114" width="202" height="23" uuid="cab0eaaf-c4cb-469a-a890-872d2b547bc7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="137" width="202" height="23" uuid="12760a8c-dd57-4c5a-b1d0-2b3f3c97985b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fklid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="160" width="202" height="23" uuid="f37b18b4-b899-4206-86e6-de2a3fdd06c5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="183" width="202" height="23" uuid="31a6bfdb-a9e5-43fb-b101-452315a26554"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dept_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="206" width="202" height="23" uuid="217749a2-fe8e-4e5c-9cf8-8eabb49493f3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{img_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="229" width="202" height="23" uuid="3b1fc63a-d10a-4cbe-9a3c-8fbd1d5c8bf2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{img_loc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="252" width="202" height="23" uuid="2deedafa-f209-4ca7-9061-74287fa0506b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prdtlife}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="275" width="202" height="23" uuid="df36cf05-72ae-4f34-a9b9-386c43df859d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{suplrwrnty}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="91" y="22" width="200" height="23" uuid="f7bb593b-aaf3-4045-9a42-0e4e3eae81ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Purchase Memo No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="45" width="202" height="23" uuid="83ccc5c7-ec91-408b-a3bd-63ee4ce8ce9b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier Information :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="68" width="202" height="23" uuid="d06c5caf-e2d9-4d14-afcd-8e524534cb59"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cost :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="91" width="202" height="23" uuid="23fe5adb-2e8c-4be9-8b1e-ddc1604c0282"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Type  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="114" width="202" height="23" uuid="da02f0b2-4e90-4e57-af2c-2ab4c91999e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IP :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="137" width="202" height="23" uuid="afc99aef-866b-4a3d-ab23-129da3a75cec"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Machine Tag No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="160" width="202" height="23" uuid="35463414-93a1-479e-9ce0-4e4dc445f502"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assign To :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="183" width="202" height="23" uuid="1b6c0d6f-6e16-4a68-b0fe-19bfb3846589"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Using Deptertment ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="206" width="202" height="23" uuid="f8e3c70e-3c55-4fbd-ab6b-012a61fc498d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Image(ISO) Entry Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="229" width="202" height="23" uuid="f63760f4-e9e8-4e9d-b071-87e9d6294932"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Image(ISO) Location :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="252" width="202" height="23" uuid="13c9bf43-87c8-48df-9b76-04b041c9c239"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Lifetime (In Month) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="275" width="202" height="23" uuid="9fb54637-4b69-4b0c-ac53-b256b574168e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier Warranty  (In Month) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="298" width="202" height="23" uuid="e9adc88e-7347-46ea-9f09-9f12c9e1b8a3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remaining Lifetime (In Month):]]></text>
+			</staticText>
+			<textField pattern="d/M/yy">
+				<reportElement x="290" y="321" width="202" height="23" uuid="f3634127-9970-460c-8299-67d4526f33e2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buydate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="90" y="321" width="202" height="23" uuid="dec2f2af-e8b2-4111-b308-11fb6a10d8e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Purchase Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="293" y="298" width="202" height="23" uuid="5ee3837b-620e-499d-ad95-c3f64596d8cf"/>
+				<box>
+					<pen lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{remlife}) >Integer.valueOf(("-1")) ? ($F{remlife}).toString( )  : ("Expired")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="1" y="23" width="549" height="24" forecolor="#080808" backcolor="#DEDACC" uuid="0be1cbed-7044-4e7f-9bc5-7410270d18c6"/>
+				<textField evaluationTime="Report">
+					<reportElement x="490" y="1" width="40" height="20" forecolor="#121211" uuid="b61afd5d-3aa0-406b-a73d-503e362596da"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="410" y="1" width="80" height="20" forecolor="#121211" uuid="93ac7a30-81d4-43ab-ad78-be22a6ed25f6"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="22" y="1" width="197" height="20" forecolor="#0D0D0C" uuid="263ff9cd-2292-4b38-8193-dd6979d2677a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
