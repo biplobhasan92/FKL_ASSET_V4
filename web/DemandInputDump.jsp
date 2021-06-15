@@ -13,7 +13,6 @@
 
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>Welcome</title>
         <sx:head/>
@@ -38,15 +37,14 @@
             }
         </script>
     </head>
-    
+
     <body>
         <%@include file="mainMenu.jsp" %>
         <h2>Struts 2 Autocomplete (Drop down) Example!</h2>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <s:select size="1" list="demandDesc" 
-                  label="Country" name="Country" cssClass="form-control">
+                    <s:select size="1" list="demandDesc" label="Country" name="Country" cssClass="form-control">
                         <sx:submit value="save" />
                     </s:select>
                 </div>

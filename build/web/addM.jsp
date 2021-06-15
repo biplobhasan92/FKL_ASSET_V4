@@ -38,10 +38,8 @@
             }
         </style>
         <script>
-
             var count = 0;
-            function isSave2() {
-
+            function isSave2(){
                 var error = 'Yes';
                 var error2 = '';
                 var message = '';
@@ -110,7 +108,7 @@
             
             
             
-            function qtyCheck(id, value) {
+            function qtyCheck(id, value){
                 var status = !isNaN(value);
                 if (status == false) {
                     alert("Invalid input!");
@@ -121,7 +119,7 @@
             
             
             
-            function isSave() {
+            function isSave(){
                 var ip = document.getElementById('ip').value;
                 if (ip === "" && count == 0) {
                     var status = confirm("Are You Sure Want To Save Without IP?");
@@ -134,11 +132,10 @@
                 }
             }
 
-        //  ######################################################################################################################
+
         
-        
-            $(document).ready(function () {
-                $('#ip').blur(function (event) {
+            $(document).ready(function (){
+                $('#ip').blur(function (event){
                     var ip = $('#ip').val();
                     $.ajax({
                         url: 'ajaxIpChck',
@@ -151,6 +148,7 @@
                         }
                     });
                 });
+                
 
                 $('.t').hover(function (event) {
                     var pos = $(this).position();
@@ -166,22 +164,19 @@
                 });
             });
 
-            function enable() {
+            function enable(){
                 document.getElementById("tagLabel").removeAttribute("style");
                 document.getElementById("tagDiv").setAttribute("style", "disply : block");
                 document.getElementById("search").setAttribute("value", "Search");
             }
 
             var disable = document.getElementById("tagLabel");
-            disable.onmouseover = function () {
+            disable.onmouseover = function (){
                 document.getElementById("tagLabel").setAttribute("style", "color: #9c2400");
                 document.getElementById("tagDiv").setAttribute("style", "display: none");
                 document.getElementById("search").setAttribute("value", "Show");
 
             }
-
-
-
         </script>
 
         <title>FKL ASSET V4 | Add Machine</title>

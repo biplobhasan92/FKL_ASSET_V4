@@ -240,58 +240,23 @@
       </div>
       
           
-     <script>
-     
-    
-    /*var enable=document.getElementById("search");
-    enable.onmouseover= function (){
-            document.getElementById("mlabel").removeAttribute("style")
-            document.getElementById("fklid").removeAttribute("disabled");
-        
-        }*/
-   
-        
-    function enable (){
+     <script>        
+        function enable (){
             document.getElementById("tagLabel").removeAttribute("style");
-            //document.getElementById("tagDiv").removeAttribute("style");
-            //document.getElementById("tagDiv").setAttribute("style","disply : block");
-            //document.getElementById("search").setAttribute("value","Search");
-            document.getElementById("fklid").removeAttribute("disabled");
-            //document.getElementById("fklid").style.disply="none";
-            //document.getElementById("tag").setAttribute("style","disply : block");
+            document.getElementById("fklid").removeAttribute("disabled");        
+        }
         
-        } 
-        
-     
-        
-     
-    
-    var disable=document.getElementById("tagLabel");
-    disable.onmouseover= function () {
+        var disable=document.getElementById("tagLabel");
+        disable.onmouseover= function (){
             document.getElementById("tagLabel").removeAttribute("style");
             document.getElementById("tagDiv").removeAttribute("style");
-            //document.getElementById("fklid").removeAttribute("disabled");
-            //document.getElementById("tagDiv").setAttribute("style","disply : block");
-            //document.getElementById("tagLabel").setAttribute("style","color: #9c2400");
-            //document.getElementById("tagDiv").setAttribute("style","display: none");
-            //document.getElementById("search").setAttribute("value","Show");
-         
         }
         
-        
-        
-    var disable2=document.getElementById("tagDivo");
-    disable2.onmouseover= function () {
-            //document.getElementById("tagLabel").removeAttribute("style");
-            //document.getElementById("tagDiv").removeAttribute("style");
-            //document.getElementById("fklid").removeAttribute("disabled");
-            //document.getElementById("tagDiv").setAttribute("style","disply : block");
+        var disable2=document.getElementById("tagDivo");
+        disable2.onmouseover= function (){
             document.getElementById("tagLabel").setAttribute("style","color: #9c2400");
-            document.getElementById("tagDiv").setAttribute("style","display: none");
-            //document.getElementById("search").setAttribute("value","Show");
-         
-        }
-     
+            document.getElementById("tagDiv").setAttribute("style","display: none");         
+        }     
     </script>     
           
       
