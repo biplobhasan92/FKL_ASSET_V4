@@ -8,7 +8,6 @@
     <constant name = "struts.multipart.maxSize" value = "1000000" />
     
     <package name="default" extends="struts-default">
-
         <interceptors>
             <interceptor class="com.fk.login.AdminInterceptor"
                          name="loginInterceptor">
@@ -30,9 +29,6 @@
         <action name="logout" class="com.fk.action.AdminAction" method="logout">
             <result name="success" >/index.jsp</result>
         </action>
-        
-        
-
         
         
         <action name="createUser" class="com.fk.action.MenuAction" method="createUser">
