@@ -192,17 +192,12 @@ public class MenuAction extends ActionSupport implements ModelDriven<EmpBean>{
     public String newEmp()
     {
         setDeptList(this.deptList);
-        return "success";
-    
-    
+        return "success";    
     } 
     
     public String createUser()
-    {
-        
-        return "success";
-    
-    
+    {        
+        return "success";        
     }
     
 

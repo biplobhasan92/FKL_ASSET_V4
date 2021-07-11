@@ -154,7 +154,7 @@ public class EmpManagerImpl implements EmpManager {
     
     
     
-      @Override
+    @Override
     public List<EmpBean> getAllRecords() {
         List<EmpBean> eBeans=new ArrayList<EmpBean>();
         try {
@@ -184,7 +184,7 @@ public class EmpManagerImpl implements EmpManager {
                             "    IFNULL(msg.nstatus, 'N/A') AS nstatus,\n"+
                             "    IFNULL(msg.pcstatus, 'N/A') AS pcstatus,\n"+
                             "    IFNULL(msg.asgn_update_date, 'N/A') AS asgn_update_date,\n"+
-                            "    IFNULL(DATE_FORMAT(mb.buydate, \"%m-%d-%Y\"), 'N/A') AS purchase_date\n"+
+                            "    IFNULL(DATE_FORMAT(mb.buydate, \"%d-%m-%Y\"), 'N/A') AS purchase_date\n"+
                             "FROM\n" +
                             "   empdata emp\n" +
                             " JOIN\n" +
@@ -198,7 +198,7 @@ public class EmpManagerImpl implements EmpManager {
                             " JOIN\n" +
                             "   mbuydata mb\n" +
                             " ON\n" +
-                            "  (mb.pid=md.pid); ";
+                            "  (mb.pid=md.pid)";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             EmpBean eBean;            
@@ -1222,9 +1222,7 @@ public class EmpManagerImpl implements EmpManager {
 
             String strperson5 = "insert into mbuydata(memo,supplier,cost,prdtlife,suplrwrnty,buydate)values(?,?,?,?,?,?)";
             PreparedStatement ps5 = con.prepareStatement(strperson5);
-
             ps5.setString(1, eBean.getMemo());
-
             ps5.setString(2, eBean.getSupplier());
             ps5.setString(3, eBean.getCost());
             ps5.setString(4, eBean.getPrdtlife());
@@ -2230,6 +2228,9 @@ public class EmpManagerImpl implements EmpManager {
             return false;
         }
     }
+    
+    
+    
 
     @Override
     public List<EmpBean> getPrinter(){     

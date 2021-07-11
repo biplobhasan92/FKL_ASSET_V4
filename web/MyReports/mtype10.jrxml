@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dept" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5433a9e9-ddb6-400e-9fd5-3d2563eb3477">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Asset Running DB"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
@@ -197,7 +197,7 @@ order by mdata.fklid]]>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="45" splitType="Stretch">
+		<band height="44" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<rectangle>
 				<reportElement stretchType="RelativeToTallestObject" x="0" y="9" width="789" height="35" forecolor="#FFFFFF" backcolor="#E6E3DC" uuid="0f4f84a5-476a-48c7-9a9e-602f0a2efffc"/>
@@ -428,7 +428,7 @@ order by mdata.fklid]]>
 				<textFieldExpression><![CDATA[$F{ip}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement stretchType="RelativeToTallestObject" x="310" y="0" width="70" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="2f9f8daf-a0fa-4e24-aa66-032d9d258e6d"/>
+				<reportElement stretchType="RelativeToTallestObject" x="310" y="-1" width="70" height="21" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="2f9f8daf-a0fa-4e24-aa66-032d9d258e6d"/>
 				<box padding="3">
 					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#B6B5B0"/>

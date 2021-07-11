@@ -1026,8 +1026,7 @@ public class EmpAction extends ActionSupport implements ModelDriven<EmpBean>{
 
         if(eBean.getName() == null || eBean.getName().trim().isEmpty())
         {
-            eBean.setMessage2("Enter Name");
-            
+            eBean.setMessage2("Enter Name");            
             setDeptList(this.deptList);
             return  "fail";
         }
@@ -1058,10 +1057,8 @@ public class EmpAction extends ActionSupport implements ModelDriven<EmpBean>{
         
         
         
-        int x=eCheck.checkId2(id);
-        
-        if (x==0) {// check that the inputed id is not in empdata
-            
+        int x=eCheck.checkId2(id);        
+        if (x==0) { // check that the inputed id is not in empdata            
             boolean isSave;
             isSave=eManager.saveEmp(eBean); // add new employee
 
@@ -1464,7 +1461,7 @@ public class EmpAction extends ActionSupport implements ModelDriven<EmpBean>{
     
     
     
-    public String saveMtypeSettings() {
+    public String saveMtypeSettings(){
 
         //validation------------------------------------------------------
         if (eBean.getMtype() == null || eBean.getMtype().trim().isEmpty()) {
@@ -1485,8 +1482,7 @@ public class EmpAction extends ActionSupport implements ModelDriven<EmpBean>{
     }
     
     
-    public String getTagData() {
-
+    public String getTagData(){
         EmpBean pb = eManager.getTagData(eBean.getFklid());
         eBean.setId(pb.getId());
         eBean.setName(pb.getName());
@@ -1507,7 +1503,6 @@ public class EmpAction extends ActionSupport implements ModelDriven<EmpBean>{
         eBean.setImgdate(pb.getImgdate());
         eBean.setImgloc(pb.getImgloc());
         eBean.setRemarks(pb.getRemarks());
-
         return "success";
     }
     

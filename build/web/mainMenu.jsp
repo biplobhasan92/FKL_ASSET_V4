@@ -38,7 +38,7 @@
                             <s:url id="testAction" action="testAction"></s:url> 
                         --%>
                         <s:url id="logout"      action="logout" ></s:url>
-                        <s:a cssClass="nav-link" href="%{addM}">New Entry <span class="sr-only">(current)</span> </s:a>
+                        <s:a cssClass="nav-link" href="%{addM}">New Entry<span class="sr-only">(current)</span> </s:a>
                     </li>
                     <li class="nav-item">
                         <s:a cssClass="nav-link" href="%{searchEntry}">Search/Update</s:a>
@@ -65,7 +65,7 @@
                             <s:a cssClass="nav-link dropdown-item" href="%{openHisReport}">History</s:a>
                             <s:if test="%{#session.emp_id=='012032' || #session.emp_id=='012007' || #session.emp_id=='012008' || #session.emp_id=='012022'}">
                                 <s:a cssClass="nav-link dropdown-item" href="%{log_history}">Log History</s:a>
-                            </s:if>                            
+                            </s:if>      
                         </div>
                     </li>
                     <li class="nav-item">

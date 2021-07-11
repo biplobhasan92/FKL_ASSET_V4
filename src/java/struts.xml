@@ -307,7 +307,7 @@
         
         <action name="openHisReport" class="com.fk.action.MenuAction" method="openHisReport">
             <result name="success">reportHis.jsp</result> 
-        </action> 
+        </action>
         
         
         <action name="machineReport" class="com.fk.action.MenuAction" method="machineReport">

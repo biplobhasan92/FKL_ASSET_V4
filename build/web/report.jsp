@@ -132,19 +132,16 @@
                         
                              
                              <tr>
-                             <td>For Product Type Wise Report Enter Product Type :</td>
-                             
-                             <td>
-                                 <s:select list="%{productList}" name="mtype" id="mtype" 
+                                <td>For Product Type Wise Report Enter Product Type :</td>
+                                <td>
+                                    <s:select list="%{productList}" name="mtype" id="mtype" 
                                        headerKey="" headerValue="---Select Type---" cssClass="select" ></s:select>                                                          
-                             </td>
-                             
-                             
-                             <td >
-                             <s:submit value="View Report" onclick="/checkDept()" action="showReport4" cssClass="btn btn-primary btn-large btn_fix_size">
-                                <s:param name="mtype" value="mtype" />
-                             </s:submit>
-                             </td>
+                                </td>
+                                <td>
+                                    <s:submit value="View Report" onclick="/checkDept()" action="showReport4" cssClass="btn btn-primary btn-large btn_fix_size">
+                                       <s:param name="mtype" value="mtype" />
+                                    </s:submit>
+                                </td>
                              </tr>
                              
                              <tr>
