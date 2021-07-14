@@ -1,41 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_3" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="55b5dd22-354a-479a-aae2-b0606fca166f">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dept" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5433a9e9-ddb6-400e-9fd5-3d2563eb3477">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FKL_ASSET_V4"/>
-	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="624"/>
-	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="366"/>
-	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="298"/>
-	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="697"/>
-	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
 		<box>
-			<pen lineWidth="0.5" lineColor="#000000"/>
-			<topPen lineWidth="0.5" lineColor="#000000"/>
-			<leftPen lineWidth="0.5" lineColor="#000000"/>
-			<bottomPen lineWidth="0.5" lineColor="#000000"/>
-			<rightPen lineWidth="0.5" lineColor="#000000"/>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
 		</box>
 	</style>
-	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
 		<box>
-			<pen lineWidth="0.5" lineColor="#000000"/>
-			<topPen lineWidth="0.5" lineColor="#000000"/>
-			<leftPen lineWidth="0.5" lineColor="#000000"/>
-			<bottomPen lineWidth="0.5" lineColor="#000000"/>
-			<rightPen lineWidth="0.5" lineColor="#000000"/>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
 		</box>
 	</style>
 	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
 		<box>
-			<pen lineWidth="0.5" lineColor="#000000"/>
-			<topPen lineWidth="0.5" lineColor="#000000"/>
-			<leftPen lineWidth="0.5" lineColor="#000000"/>
-			<bottomPen lineWidth="0.5" lineColor="#000000"/>
-			<rightPen lineWidth="0.5" lineColor="#000000"/>
-		</box>
-	</style>
-	<style name="Table 1_TH" mode="Opaque" backcolor="#FFFFFF">
-		<box>
 			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
 			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
 			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
@@ -43,92 +30,58 @@
 			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
 		</box>
 	</style>
-	<style name="Table 1_CH" mode="Opaque" backcolor="#FFFFFF">
-		<box>
-			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
-		</box>
-	</style>
-	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
-		<box>
-			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
-			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
-		</box>
-	</style>
-	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
-		<box>
-			<pen lineWidth="0.5" lineColor="#000000"/>
-			<topPen lineWidth="0.5" lineColor="#000000"/>
-			<leftPen lineWidth="0.5" lineColor="#000000"/>
-			<bottomPen lineWidth="0.5" lineColor="#000000"/>
-			<rightPen lineWidth="0.5" lineColor="#000000"/>
-		</box>
-	</style>
-	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
-		<box>
-			<pen lineWidth="0.5" lineColor="#000000"/>
-			<topPen lineWidth="0.5" lineColor="#000000"/>
-			<leftPen lineWidth="0.5" lineColor="#000000"/>
-			<bottomPen lineWidth="0.5" lineColor="#000000"/>
-			<rightPen lineWidth="0.5" lineColor="#000000"/>
-		</box>
-	</style>
-	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
-		<box>
-			<pen lineWidth="0.5" lineColor="#000000"/>
-			<topPen lineWidth="0.5" lineColor="#000000"/>
-			<leftPen lineWidth="0.5" lineColor="#000000"/>
-			<bottomPen lineWidth="0.5" lineColor="#000000"/>
-			<rightPen lineWidth="0.5" lineColor="#000000"/>
-		</box>
-	</style>
-	<subDataset name="Dataset1" uuid="7aa75884-1046-4cd3-aa8a-f00ec59077a2">
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
-		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-		<queryString>
-			<![CDATA[]]>
-		</queryString>
-	</subDataset>
-	<subDataset name="Dataset2" uuid="36b08cca-db81-4f23-af8e-16faa5002172">
+	<subDataset name="Dataset1" uuid="b515137f-9bc7-40a2-933c-6c971139552c">
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+		<parameter name="dept2" class="java.lang.String">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA[$P{dept2}]]></defaultValueExpression>
+		</parameter>
 		<queryString language="SQL">
-			<![CDATA[select count(fklid) as total from masgndata]]>
+			<![CDATA[SELECT count( $P{dept2}) AS dept_c, sum(  mbuydata.cost ) AS tcost
+FROM  empdata,
+ mdata ,
+ masgndata,
+ mbuydata 
+WHERE 
+	 mdata.fklid = masgndata.fklid 
+	 AND masgndata.id = empdata.id 
+	 AND mdata.dept_id = $P{dept2}
+	 AND mdata.pid = mbuydata.pid]]>
 		</queryString>
-		<field name="total" class="java.lang.Long"/>
-		<variable name="dep" class="java.lang.Integer">
-			<variableExpression><![CDATA[$F{total}]]></variableExpression>
-		</variable>
+		<field name="dept_c" class="java.lang.Long"/>
+		<field name="tcost" class="java.math.BigDecimal"/>
 	</subDataset>
-	<subDataset name="Dataset3" uuid="d5e1e640-c1a7-4277-852c-20017c61cb05">
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+	<subDataset name="Dataset5" uuid="6758b5a5-f0f8-4183-b8cc-bb24ba1f3c33">
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-		<parameter name="dept_id" class="java.lang.String"/>
-		<queryString>
-			<![CDATA[select count(fklid) as deptotal from mdata]]>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test 1"/>
+		<parameter name="dept3" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{dept3}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[select count(mdata.dept_id) as dept_c2 
+from deptlist, mdata, masgndata, empdata
+where deptlist.dept=$P{dept3}
+and deptlist.dept=empdata.dept
+and empdata.id=masgndata.id
+and masgndata.fklid=mdata.fklid]]>
 		</queryString>
-		<field name="deptotal" class="java.lang.Long"/>
+		<field name="dept_c2" class="java.lang.Long"/>
 	</subDataset>
+	<parameter name="dept" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["CAD"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dept_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="SQL">
-		<![CDATA[SELECT
-  *
-FROM
-  empdata,
-  mdata,
-  masgndata,
-  deptlist,
-  main_deptlist
-WHERE mdata.fklid  = masgndata.fklid
-  AND masgndata.id = empdata.id
-  AND empdata.dept = deptlist.dept
-  AND deptlist.dept_id = main_deptlist.dept_id
-ORDER BY empdata.dept]]>
+		<![CDATA[select * from  empdata , mdata , masgndata,  main_deptlist 
+where mdata.fklid=masgndata.fklid 
+and masgndata.id=empdata.id 
+and mdata.dept_id = main_deptlist.dept_id
+and mdata.dept_id = $P{dept_id}
+order by mdata.dept_id]]>
 	</queryString>
 	<field name="id" class="java.lang.String"/>
 	<field name="emp_name" class="java.lang.String"/>
@@ -141,54 +94,35 @@ ORDER BY empdata.dept]]>
 	<field name="hdd" class="java.lang.String"/>
 	<field name="mboard" class="java.lang.String"/>
 	<field name="ram" class="java.lang.String"/>
-	<field name="img_date" class="java.lang.String"/>
-	<field name="img_loc" class="java.lang.String"/>
 	<field name="chip" class="java.lang.String"/>
 	<field name="mtype" class="java.lang.String"/>
 	<field name="pid" class="java.lang.Integer"/>
-	<field name="COLUMN_17" class="java.lang.String"/>
-	<field name="COLUMN_18" class="java.lang.String"/>
-	<field name="COLUMN_19" class="java.lang.String"/>
+	<field name="img_date" class="java.lang.String"/>
+	<field name="img_loc" class="java.lang.String"/>
+	<field name="remarks" class="java.lang.String"/>
 	<field name="mid" class="java.lang.String"/>
 	<field name="pcstatus" class="java.lang.String"/>
 	<field name="nstatus" class="java.lang.String"/>
 	<field name="asgn_update_date" class="java.sql.Timestamp"/>
 	<field name="handover_date" class="java.lang.String"/>
 	<field name="inactive" class="java.lang.String"/>
-	<field name="COLUMN_27" class="java.lang.String"/>
-	<field name="COLUMN_28" class="java.lang.String"/>
-	<field name="COLUMN_29" class="java.lang.String"/>
 	<field name="dept_name" class="java.lang.String"/>
-	<variable name="count" class="java.lang.Integer" resetType="Group" resetGroup="dept" calculation="Count">
+	<variable name="count" class="java.lang.Integer" resetType="None" calculation="Count">
 		<variableExpression><![CDATA[$F{pid}]]></variableExpression>
 	</variable>
-	<variable name="t_count" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{pid}]]></variableExpression>
+	<variable name="dept_count" class="java.lang.Integer" resetType="Group" resetGroup="Group2" calculation="Count">
+		<variableExpression><![CDATA[$F{fklid}]]></variableExpression>
 	</variable>
-	<variable name="deptcount" class="java.lang.String" calculation="Count"/>
-	<group name="dept" isStartNewPage="true" isReprintHeaderOnEachPage="true">
+	<variable name="count_dept." class="java.lang.String" calculation="Count">
+		<variableExpression><![CDATA[$F{fklid}]]></variableExpression>
+	</variable>
+	<group name="Group2" isStartNewPage="true" isReprintHeaderOnEachPage="true" keepTogether="true">
 		<groupExpression><![CDATA[$F{dept}]]></groupExpression>
 		<groupHeader>
-			<band height="35">
+			<band height="28">
 				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				<textField>
-					<reportElement mode="Opaque" x="2" y="2" width="797" height="17" backcolor="#BDBDBD" uuid="f8fce4b7-e5c0-41d5-9f0c-d8a2bb8257cf">
-						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-					</reportElement>
-					<box leftPadding="3">
-						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="SansSerif" size="8" isBold="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{dept} == null ?	"N/A" :$F{dept} ]]></textFieldExpression>
-				</textField>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="244" y="20" width="62" height="15" backcolor="#EBE8E8" uuid="35f6e0be-ffbd-43e3-b002-a92d0c0b7d33">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="245" y="13" width="62" height="15" backcolor="#EBE8E8" uuid="2dfb349c-be7f-4390-8fff-ff82fcfa8aeb">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -203,7 +137,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[IP]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="306" y="20" width="55" height="15" backcolor="#EBE8E8" uuid="56e6b9ff-eb7e-4e00-b99d-11dee81da2b3"/>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="307" y="13" width="55" height="15" backcolor="#EBE8E8" uuid="7025b76b-49b2-4dda-883e-107f36add069"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -216,7 +150,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[Tag No]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="33" y="20" width="52" height="15" backcolor="#EBE8E8" uuid="280a1f94-16a8-4810-a652-3a424e7549d1">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="34" y="13" width="52" height="15" backcolor="#EBE8E8" uuid="f34cf81f-977b-4632-b916-f7e4b955f3ef">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -231,7 +165,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[ID]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="85" y="20" width="79" height="15" backcolor="#EBE8E8" uuid="035a522a-50b6-48da-a532-d7ce5e8b5338">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="86" y="13" width="79" height="15" backcolor="#EBE8E8" uuid="1f60ec77-04ee-4ad8-a76d-2f13e2540e34">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -246,7 +180,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[Name]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="409" y="20" width="54" height="15" backcolor="#EBE8E8" uuid="d70e0c09-978e-44e1-b08d-b4d1efa9f48a">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="410" y="13" width="54" height="15" backcolor="#EBE8E8" uuid="53bbef2f-a766-4acc-b5ad-89c3354720bc">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -261,7 +195,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[RAM(GB)]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="2" y="20" width="31" height="15" backcolor="#EBE8E8" uuid="dedbc3b2-242c-4e7e-bcbb-2c52265b48db">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="3" y="13" width="31" height="15" backcolor="#EBE8E8" uuid="ac224643-9a81-4a4f-8715-bb568fb2440b">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -276,7 +210,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[SL]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="164" y="20" width="80" height="15" backcolor="#EBE8E8" uuid="339c62fe-cd13-4e1c-8bd4-5f0c5e0018b7"/>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="165" y="13" width="80" height="15" backcolor="#EBE8E8" uuid="5d2699a2-6fe6-4770-b25e-0ac84b30737b"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -289,7 +223,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[Designation]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="463" y="20" width="66" height="15" backcolor="#EBE8E8" uuid="013a5a3c-5fda-4ed8-8ed9-e01c47c8b1f2">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="464" y="13" width="66" height="15" backcolor="#EBE8E8" uuid="74191b80-5b15-41c1-a8ac-8316aa235a9c">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -304,7 +238,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[HDD]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="529" y="20" width="70" height="15" backcolor="#EBE8E8" uuid="bc6a3378-521c-44ad-ab7c-37eb4d9df364">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="530" y="13" width="70" height="15" backcolor="#EBE8E8" uuid="f19a54b9-671f-4978-9369-29ee7df9f6d0">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -319,7 +253,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[M.Board]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="599" y="20" width="110" height="15" backcolor="#EBE8E8" uuid="f82d4982-8ef2-431e-a3fd-4e7287cfdf6f">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="600" y="13" width="110" height="15" backcolor="#EBE8E8" uuid="c4373996-07ad-4fb1-a15b-d9d4e2e56ca1">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -334,7 +268,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[PROCESSOR]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="709" y="20" width="45" height="15" backcolor="#EBE8E8" uuid="277af9e4-7c2e-4185-94f8-5baba873a55b">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="710" y="13" width="45" height="15" backcolor="#EBE8E8" uuid="e07a3a17-0d8b-4da3-b350-5f3d09bebf24">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -349,7 +283,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[Handover]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="754" y="20" width="45" height="15" backcolor="#EBE8E8" uuid="acc031d3-523a-4791-93a3-dfcb7fb4e088">
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="755" y="13" width="45" height="15" backcolor="#EBE8E8" uuid="1c02b480-dced-4522-b02b-6921b9b3c0c3">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<box>
@@ -364,7 +298,7 @@ ORDER BY empdata.dept]]>
 					<text><![CDATA[Net Status]]></text>
 				</staticText>
 				<staticText>
-					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="361" y="20" width="48" height="15" backcolor="#EBE8E8" uuid="85bb5e8d-7908-4495-9022-fa5079b1fddb"/>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="362" y="13" width="48" height="15" backcolor="#EBE8E8" uuid="34eeae41-87ac-4c43-87c1-428a2ff934fc"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -376,83 +310,179 @@ ORDER BY empdata.dept]]>
 					</textElement>
 					<text><![CDATA[Type]]></text>
 				</staticText>
-				<textField evaluationTime="Group" evaluationGroup="dept">
-					<reportElement x="730" y="4" width="64" height="16" uuid="ebcbe68a-835a-4e4a-acfd-f6643ca1ff42">
-						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					</reportElement>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="8" isBold="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$V{count}]]></textFieldExpression>
-				</textField>
 			</band>
 		</groupHeader>
+		<groupFooter>
+			<band>
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			</band>
+		</groupFooter>
 	</group>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="65" splitType="Stretch">
+		<band height="42" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
-				<reportElement x="194" y="3" width="397" height="20" uuid="f1ffadec-a0bd-48e1-9312-d452266cb877"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[FAKIR KNITWARES LTD.]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="94" y="19" width="600" height="25" uuid="4c7f843c-8064-43d9-9e1e-d47b40bc7a67">
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				<reportElement x="253" y="1" width="280" height="15" uuid="945bbba8-9be8-478a-adc5-ae48d9ccf5cb">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="12" isBold="false"/>
+					<font fontName="SansSerif" size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[DEPARTMENT WISE IT INVENTORY RECORDS]]></text>
+				<text><![CDATA[FAKIR KNITWEARS LTD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="208" y="35" width="246" height="30" uuid="797e49cf-2a93-4437-b273-04d4d38425ce"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="SansSerif" isBold="false"/>
+				<reportElement x="253" y="16" width="280" height="12" uuid="02b81ef1-167b-44b0-9480-3cdc2907ef0f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Total Machine For All Department: ]]></text>
+				<text><![CDATA[KAYAMPUR, FATULLAH, NARAYANGONJ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="28" width="250" height="14" uuid="973b5b93-ffe9-404f-9443-d2930d24a68c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Department Wise Total Records of IT Asset]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="73" y="3" width="154" height="16" uuid="0fc6c215-2ce1-4d5c-bebb-910201c384a5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dept_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="19" width="60" height="14" uuid="b8959e87-cef5-4d55-9b22-d418f8f11847">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Machine:]]></text>
 			</staticText>
 			<componentElement>
-				<reportElement x="454" y="35" width="100" height="30" uuid="8274977c-26c9-4712-8d4b-8e42005161a5">
+				<reportElement isPrintRepeatedValues="false" x="82" y="21" width="144" height="12" uuid="18bc7942-d687-4002-9d70-e66b9dc13fd4">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="Dataset2" uuid="356db9ab-a5dd-43f1-955f-f3e42a618778">
+					<datasetRun subDataset="Dataset1" uuid="c559fa03-ae45-4b2a-be7c-e1ba55482e27">
+						<datasetParameter name="dept2">
+							<datasetParameterExpression><![CDATA[$P{dept_id}]]></datasetParameterExpression>
+						</datasetParameter>
 						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 					</datasetRun>
-					<jr:column width="200" uuid="c6fb5001-3cc9-427f-8368-432b905e3210">
-						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
-						<jr:detailCell height="30">
+					<jr:column width="200" uuid="af4b81fb-fbe9-4363-b25d-6d712e5cf120">
+						<jr:detailCell style="Table_TD" height="30">
 							<textField>
-								<reportElement x="0" y="0" width="200" height="30" uuid="b26b2087-cea1-4159-b97a-56fc15105e00"/>
-								<textElement textAlignment="Left" verticalAlignment="Middle">
-									<font isBold="false" isItalic="false"/>
+								<reportElement x="0" y="0" width="200" height="30" uuid="2884c330-c516-43d1-9453-5c08aaa0932f">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Left" verticalAlignment="Top">
+									<font fontName="SansSerif" size="9" isBold="false"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{dept_c}]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
 				</jr:table>
 			</componentElement>
-		</band>
-	</title>
-	<pageHeader>
-		<band splitType="Stretch">
-			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<componentElement>
+				<reportElement key="" style="Table_TH" isPrintRepeatedValues="false" x="714" y="19" width="84" height="12" isRemoveLineWhenBlank="true" printWhenGroupChanges="Group2" uuid="119f9fec-6fc5-4796-92f4-e93a5f0319b7">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset5" uuid="d208dc97-1120-4c5f-be9d-ed0d462e853b">
+						<datasetParameter name="dept3">
+							<datasetParameterExpression><![CDATA[$F{dept}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="63" uuid="d32982a3-cdad-471c-b09c-fbd0694512ea">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="63" height="30" uuid="320d89a0-8746-4709-a40c-f0aa7d98f4ab"/>
+								<textElement textAlignment="Left" verticalAlignment="Top">
+									<font fontName="SansSerif" size="9" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dept_c2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="689" y="3" width="110" height="14" printWhenGroupChanges="Group2" uuid="19e4e3c8-b959-47c2-872e-b879b9987e75">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dept}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="653" y="17" width="60" height="16" uuid="8d440204-0264-4f9a-8d9c-571947e34eab">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Machine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="3" width="51" height="16" uuid="68b8f914-de5f-4b09-b0cc-dfd46245e1a3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Department:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="3" width="35" height="14" uuid="d3d86e7f-917e-4e8f-8d18-986dcef9b29b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Section:]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="17" splitType="Stretch">
-			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<textField>
-				<reportElement x="2" y="0" width="31" height="17" uuid="1fe2592d-8318-43b4-ab90-1d5e60f4e62e">
+				<reportElement x="3" y="0" width="31" height="17" uuid="3c9ba35f-498f-48ac-a215-b365d20208ea">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -468,7 +498,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="33" y="0" width="52" height="17" uuid="1ae8add1-e1ff-4baf-b9df-321a8e466c13">
+				<reportElement x="34" y="0" width="52" height="17" uuid="76163f9b-b35d-4d71-812f-bab531482212">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -478,13 +508,13 @@ ORDER BY empdata.dept]]>
 					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{id}== null ?	"N/A" :$F{id}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/yyyy">
-				<reportElement x="85" y="0" width="79" height="17" uuid="ca25797a-3369-4c47-8250-d8294cf454ef">
+				<reportElement x="86" y="0" width="79" height="17" uuid="55bc0dd5-c16d-4575-9ddd-539994a65918">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -497,7 +527,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{emp_name}== null ?	"N/A" : $F{emp_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="164" y="0" width="80" height="17" uuid="4c385106-1786-45a2-8853-06588271ba02">
+				<reportElement x="165" y="0" width="80" height="17" uuid="12f9b8a5-c12a-4100-a770-c55247b0f9a8">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -513,7 +543,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{emp_designation} == null ?	"N/A" :$F{emp_designation}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="244" y="0" width="62" height="17" uuid="b0de9afd-a64f-4899-a9db-2db8908726a5">
+				<reportElement x="245" y="0" width="62" height="17" uuid="edccaee9-f3fd-475f-bb0e-213a2b90b04a">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -529,7 +559,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{ip}== null ?	"N/A" :$F{ip}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="306" y="0" width="55" height="17" uuid="4a465578-f7b6-467b-8219-75953e30d044">
+				<reportElement x="307" y="0" width="55" height="17" uuid="0ac0121f-743e-4f50-a21d-2c424c729c39">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -545,7 +575,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{fklid}== null ?	"N/A" :$F{fklid}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="409" y="0" width="54" height="17" uuid="bb0dc948-7b65-4d67-99fe-3e7fe6d12cc0">
+				<reportElement x="410" y="0" width="54" height="17" uuid="cc35688d-adcc-4295-a40b-ad6055f1acc8">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -561,7 +591,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{ram}==null? "N/A" : $F{ram}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="361" y="0" width="48" height="17" uuid="48a3919a-503e-420e-ab3a-7394d19677ad">
+				<reportElement x="362" y="0" width="48" height="17" uuid="c0bd191e-914e-47b5-8788-e2e5d130813f">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -574,10 +604,10 @@ ORDER BY empdata.dept]]>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{mtype} ==null? "N/A" : $F{mtype}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{mtype} ==null? "N/A" : $F{mtype} ]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="463" y="0" width="66" height="17" uuid="c7379637-115d-4488-9e0c-6f57ab23c3a6">
+				<reportElement x="464" y="0" width="66" height="17" uuid="c6c6c031-a41a-4d1d-a07f-19c79a759fa2">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -593,7 +623,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{hdd} ==null? "N/A" : $F{hdd}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="529" y="0" width="70" height="17" uuid="e56bf925-43b0-4c29-8cca-e7970cd67b3f">
+				<reportElement x="530" y="0" width="70" height="17" uuid="8c739cbd-abb9-41a2-9efc-22b747fb6ebd">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -609,7 +639,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{mboard}==null? "N/A" : $F{mboard}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="599" y="0" width="110" height="17" uuid="88990229-b170-4266-8470-ff4a8d21c082">
+				<reportElement x="600" y="0" width="110" height="17" uuid="29db7bd6-413c-44a5-ae9d-016c3362450a">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -625,7 +655,7 @@ ORDER BY empdata.dept]]>
 				<textFieldExpression><![CDATA[$F{chip}== null ? "N/A" : $F{chip}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="709" y="0" width="45" height="17" uuid="68b43070-6a15-4282-b903-8ff33aa5fe65">
+				<reportElement x="710" y="0" width="45" height="17" uuid="0b2d6b17-6b27-4875-9154-b6812a896e17">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -638,10 +668,10 @@ ORDER BY empdata.dept]]>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{handover_date} == null ? "N/A" : $F{handover_date}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{handover_date} == null ? "N/A" : $F{handover_date} ]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="754" y="0" width="45" height="17" uuid="9d41a9c6-8d25-47fe-b1ab-dfc45fa3ed5e">
+				<reportElement x="755" y="0" width="45" height="17" uuid="03991563-84dd-45ab-83e7-5a8264c82afe">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -658,29 +688,26 @@ ORDER BY empdata.dept]]>
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band splitType="Stretch"/>
-	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch">
+		<band height="27" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="2" y="1" width="799" height="24" forecolor="#080808" backcolor="#DEDACC" uuid="a583ecc2-bf67-49f2-b1eb-43eff9ab204a"/>
+				<reportElement mode="Opaque" x="2" y="3" width="798" height="24" forecolor="#080808" backcolor="#DEDACC" uuid="9c7b890b-c201-466e-b726-f739c6f719fb"/>
 				<textField evaluationTime="Report">
-					<reportElement x="735" y="4" width="40" height="20" forecolor="#121211" uuid="e245a160-cad2-48a5-9b0e-8e32ac7186f3"/>
+					<reportElement x="735" y="4" width="40" height="20" forecolor="#121211" uuid="1e96617c-fb6d-4f0a-aa9a-8d6f88c419f8"/>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="645" y="4" width="80" height="20" forecolor="#121211" uuid="0daf28d1-e17e-421c-a1d4-c45e222bea76"/>
+					<reportElement x="645" y="4" width="80" height="20" forecolor="#121211" uuid="f4148453-425d-42ab-90d3-88cfbf10487e"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 				</textField>
 				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement x="22" y="1" width="197" height="20" forecolor="#0D0D0C" uuid="0bf49206-ba3b-4111-8cce-0ef2ebae8193"/>
+					<reportElement x="22" y="1" width="197" height="20" forecolor="#0D0D0C" uuid="fcfa8f7b-c366-4b30-8cff-579c9ac740a1"/>
 					<textElement verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
@@ -689,24 +716,4 @@ ORDER BY empdata.dept]]>
 			</frame>
 		</band>
 	</pageFooter>
-	<summary>
-		<band height="21" splitType="Stretch">
-			<textField>
-				<reportElement x="457" y="1" width="100" height="20" uuid="41290785-87a7-47a0-9638-5e365dee7baf">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$V{t_count}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="270" y="1" width="186" height="20" uuid="d09da5fe-5327-4afb-b817-bc641bd1c752"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font isBold="false"/>
-				</textElement>
-				<text><![CDATA[Total Machine For All Department: ]]></text>
-			</staticText>
-		</band>
-	</summary>
 </jasperReport>

@@ -358,7 +358,7 @@ public class ReportAction implements ModelDriven<EmpBean>{
         public String showReport3() throws JRException, IOException {
         try {
             Connection con = DBconnection.getConnection();
-            if (con == null) {
+            if (con == null){
                 return "fail";
             }
             String dept_id = getDeptid(eBean.getMdept());
@@ -373,26 +373,20 @@ public class ReportAction implements ModelDriven<EmpBean>{
             ExporterInput exporterInput = new SimpleExporterInput(jp);
             exporter.setExporterInput(exporterInput);
             OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput(reportOutPutPath+"/dept10.pdf");
-          
+
             exporter.setExporterOutput(exporterOutput);
             SimplePdfExporterConfiguration configuration = new SimplePdfExporterConfiguration();
             exporter.setConfiguration(configuration);
             exporter.exportReport();
 
-            //
             HttpServletResponse res = ServletActionContext.getResponse();
-
-            //File file = new File("/repository/fkl_asset_mgmt/jasperreport/jasperoutput/dept10.pdf");
             File file = new File(reportOutPutPath+"/dept10.pdf");
             res.setHeader("Content-Type", getServletContext().getMimeType(file.getName()));
             res.setHeader("Content-Length", String.valueOf(file.length()));
             res.setHeader("Content-Disposition", "inline; filename=\"dept10.pdf\"");
-            //res.setHeader("Content-Disposition", "attachment;filename=\"dept5.pdf\"");//"inline; filename=\"dept5.pdf\"");
             Files.copy(file.toPath(), res.getOutputStream());
-
-            //JasperViewer.viewReport(jp);
             con.close();
-        } catch (SQLException ex) {
+        }catch (SQLException ex){
             ex.printStackTrace();
             return "fail";
         }
@@ -769,26 +763,22 @@ public class ReportAction implements ModelDriven<EmpBean>{
            
            if((eBean.getMtype().trim().isEmpty()==false) 
                 && (eBean.getMdept().trim().isEmpty() || eBean.getMdept().equals("") ) && (eBean.getDept().trim().isEmpty()==false ||  !eBean.getDept().equals(""))   
-             ){
-               
+            ){               
                System.out.println("test.. mtype with dept"); 
-                mywheree="  empdata.dept='"+eBean.getDept()+"' and mdata.mtype='"+eBean.getMtype()+"'  ";
-           }
+               mywheree="  empdata.dept='"+eBean.getDept()+"' and mdata.mtype='"+eBean.getMtype()+"'  ";
+            }
            
            if((eBean.getMtype().trim().isEmpty()==false ) 
                 && (eBean.getMdept().trim().isEmpty()==false || !eBean.getMdept().equals("")) && (eBean.getDept().trim().isEmpty() || eBean.getDept().equals(""))    
              ){
-               
-               System.out.println("test.. mtype with mdept"); 
-               
+               System.out.println("test.. mtype with mdept");
                String dept_id=getDeptid(eBean.getMdept());
-               
-                mywheree=" mdata.mtype='"+eBean.getMtype()+"' and  mdata.dept_id='"+dept_id+"'  ";
-           } 
+               mywheree=" mdata.mtype='"+eBean.getMtype()+"' and  mdata.dept_id='"+dept_id+"'  ";
+            }
             eBean.setMessage2(mywheree);
             parametersMap.put("mywhere", mywheree);
             Map parametersMap1 = new HashMap();  
-            parametersMap1.put("mtype",eBean.getMtype());
+            parametersMap1.put("mtype", eBean.getMtype());
             JasperReport jr=JasperCompileManager.compileReport(reportPath+"/mtype10.jrxml");
             JasperPrint jp=JasperFillManager.fillReport(jr,parametersMap,con);
             File outDir = new File(reportOutPutPath);
@@ -1189,10 +1179,8 @@ public class ReportAction implements ModelDriven<EmpBean>{
         resultSet.close();
         con.close();
         } catch (SQLException ex) {
-            ex.printStackTrace();
-            
+            ex.printStackTrace();            
         }
-        
         return subdept;
     }
     

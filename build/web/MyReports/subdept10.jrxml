@@ -277,7 +277,7 @@ order by mdata.dept_id]]>
 				<text><![CDATA[DEPARTMENT WISE IT INVENTORY RECORDS]]></text>
 			</staticText>
 			<componentElement>
-				<reportElement key="" isPrintRepeatedValues="false" x="469" y="44" width="63" height="23" isRemoveLineWhenBlank="true" printWhenGroupChanges="Group2" uuid="119f9fec-6fc5-4796-92f4-e93a5f0319b7">
+				<reportElement key="" isPrintRepeatedValues="false" x="454" y="47" width="63" height="23" isRemoveLineWhenBlank="true" printWhenGroupChanges="Group2" uuid="119f9fec-6fc5-4796-92f4-e93a5f0319b7">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
 					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
 					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
@@ -314,7 +314,7 @@ order by mdata.dept_id]]>
 				<textFieldExpression><![CDATA[$F{dept}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="383" y="47" width="85" height="23" uuid="8d440204-0264-4f9a-8d9c-571947e34eab"/>
+				<reportElement x="368" y="47" width="85" height="23" uuid="8d440204-0264-4f9a-8d9c-571947e34eab"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
