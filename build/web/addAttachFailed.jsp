@@ -7,6 +7,7 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="linkingScriptAndCss.jsp" %>
+
 <!DOCTYPE html>
 <html>
     <s:if test="%{#session.master == null && #session.admin == null && #session.entry == null}">

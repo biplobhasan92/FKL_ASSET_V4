@@ -9,10 +9,11 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="linkingScriptAndCss.jsp" %>
+
 <!DOCTYPE html>
 <html>
     <s:if test="%{#session.master == null && #session.admin == null && #session.entry == null}">
-        <jsp:forward   page="index.jsp" />
+        <jsp:forward page="index.jsp" />
     </s:if>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,9 +28,9 @@
     <body>
         <%@include file="mainMenu.jsp" %>
         <div class='main'>
-            <br>
-            <br>
-            <br>
+            <br/>
+            <br/>
+            <br/>
             <div style="text-align: center;" class="form-title">
                 <div class="container-fluid">
                     <div class="row">
@@ -93,8 +94,7 @@
                                 <s:reset value="Reset" cssClass="btn btn-danger" />
                                 <s:submit name="sumbit" value="Submit" cssClass="btn btn-primary" cssStyle="float:right;" />
                             </div>
-                            <div class="col-lg-3">                                
-                            </div>
+                            <div class="col-lg-3"></div>
                         </div>
                     </div>
                 </s:form>

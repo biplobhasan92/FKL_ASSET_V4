@@ -7,6 +7,7 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="linkingScriptAndCss.jsp" %>
+
 <!DOCTYPE html>
 <html>
     <s:if test="%{#session.master == null && #session.admin == null && #session.entry == null}">
@@ -34,13 +35,11 @@
     <body>
         <%@include file="mainMenu.jsp" %>
         <div>
-            You have successfully uploaded <s:property value = "myFileFileName"/>
+            You have successfully uploaded <s:property value = "myFileFileName" />
         </div>
         <div style="margin-top: 40px; font-size: 30px; color: green;">
             <s:property value="msg" />
         </div>
-        
-        
         
         <div class="container-fluid" style="width:95% !important">            
             <table id="myTable" class="display" style="width:100%">

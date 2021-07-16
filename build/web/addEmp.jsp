@@ -5,15 +5,18 @@
     Version    : 4.0
 
 --%>
+
 <%@include file="linkingScriptAndCss.jsp" %>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <%
     response.setHeader("Cache-Control", "no-store, must-revalidate");
     if (session.getAttribute("aname") == null) {
         response.sendRedirect("index.jsp");
     }
 %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,9 +28,7 @@
         <link href='style.css' rel='stylesheet' type='text/css'/>
          <link href='css/button.css' rel='stylesheet' type='text/css'/>
         <title>FKL ASSET V4 | Add Employee</title>
-        <script>
-            
-        </script>
+        <script></script>
     </head>
     
     <body>
@@ -74,33 +75,28 @@
                                         </s:submit>
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td>Employee Name:</td>
                                     <td><s:textfield name="name" id="name" cssClass="userId" /></td>
-
                                     <td>Employee Designation:</td>
                                     <td><s:textfield name="designation" id="designation" cssClass="userId"/></td>
-
                                     <td>Employee Department:</td>
-                                    <%--<td><s:textfield name="dept" id="dept" cssClass="userId"/></td>--%>
-                                    <td><s:select list="%{deptList}" name="dept" id="dept" 
-                                              headerKey="" headerValue="---Select Dept---" cssClass="userId"></s:select></td>                                    
+                                    <td>
+                                        <s:select list="%{deptList}" name="dept" id="dept" 
+                                              headerKey="" headerValue="---Select Dept---" cssClass="userId"></s:select>
+                                    </td>
                                 </tr>
-                                
                                 <tr>
                                     <td>PBX Ext:</td>
                                     <td><s:textfield name="pvs_extension" id="pvs_extension" cssClass="userId"/></td>
                                 </tr>
-                                <tr>
-
-                                </tr>
+                                <tr></tr>
                             </table>
-
+                                
                             <table>
                                 <tr>
                                     <td align="center">
-                                    <s:submit value="Delete" onmouseover="/addEmp()" action="deleteEmp" cssClass="btn btn-primary btn-large"/>
+                                        <s:submit value="Delete" onmouseover="/addEmp()" action="deleteEmp" cssClass="btn btn-primary btn-large"/>
                                     </td> 
                                     <td align="center">
                                         <s:submit value="Save" onmouseover="/addEmp()" action="saveEmp" cssClass="btn btn-primary btn-large"/>
@@ -110,11 +106,11 @@
                                     </td>
                                 </tr>
                             </table>
-                        </s:form> 
+                        </s:form>
                     </div>
                 </div>
             </center>
-      </div>
+        </div>
     </body>
 </html>
 

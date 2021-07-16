@@ -70,11 +70,11 @@
             <!--  #######################   mian menu  ##################################################################-->
             <center>                    
                 <div class='fix form'>          
-                    <div class="auth-form-header">    
-                      <legend align="center">Report Viewer</legend>
-                    </div>                  
-                    <div class="auth-form-body">          
-                        <s:form name="myForm"  theme="simple" target="_blank">
+                    <div class="auth-form-header">
+                        <legend align="center">Report Viewer</legend>
+                    </div>
+                    <div class="auth-form-body">
+                        <s:form name="myForm" theme="simple" target="_blank">
                             <table>
                                 <tr>
                                     <td>For Employee Wise Report Enter ID :</td>
