@@ -65,14 +65,14 @@
     <body>
         <%@include file="mainMenu.jsp" %>
         <div class='main'> <!--  main DIV is Start  -->      
-                <div style="text-align: center;" class="form-title">
+            <div style="text-align: center;" class="form-title">
                 <div class="container-fluid">
                     <div class="row">                        
                         <div class="col-lg-12">
                             <img src='images/fakir-logo.png' style="height: 115px; width: 230px;margin-left: 28px;"/>
                             <p>KAYEMPUR, FATULLAH, NARAYANGANJ</p>
                             <h2><span style="border: 1px solid #000;font-weight: bold;padding: 5px;">Departmental Demand List</span></h2>
-                        </div>                        
+                        </div>            
                     </div>
                 </div>
                 <hr/>
@@ -100,6 +100,7 @@
                             <th class="text-center">Status</th>
                             <th class="text-center">Remarks</th>                            
                             <th class="text-center">Edit</th>
+                            <th class="text-center">Delete</th>
                         </tr>
                     </thead>
 
@@ -114,19 +115,28 @@
                                 <td><s:property value="department"/></td>
                                 <td><s:property value="description"/></td>
                                 <td><s:property value="brand"/></td>
-                                <td><s:property value="model"/></td> 
+                                <td><s:property value="model"/></td>
                                 <td><s:property value="weight"/></td>
                                 <td><s:property value="pcs"/></td>
                                 <td><s:property value="partsNo"/></td>
-                                <td><s:property value="location"/></td>                                   
+                                <td><s:property value="location"/></td>                               
                                 <td><s:property value="status"/></td>
                                 <td><s:property value="remarks"/></td>
                                 <td>
-                                    <s:url id="editDemandInput" action="editDemandInput" >
+                                    <s:url id="editDemandInput" action="editDemandInput">
                                         <s:param name="ddn_no" value="ddn_no" />
                                     </s:url>
                                     <s:a href="%{editDemandInput}" cssClass="btn btn-light">
                                         Edit
+                                    </s:a>
+                                </td>
+                                <td>
+                                    <s:url id="deleteDemandInput" action="deleteDemandInput" >
+                                        <s:param name="sl" value="sl" />
+                                        <s:param name="ddn_no" value="ddn_no" />
+                                    </s:url>
+                                    <s:a href="%{deleteDemandInput}" cssClass="btn btn-light" onclick="return confirm('Do you want to Delete this records? ')">
+                                        Delete
                                     </s:a>
                                 </td>
                             </tr>

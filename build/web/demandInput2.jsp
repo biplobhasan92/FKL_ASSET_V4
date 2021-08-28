@@ -248,7 +248,7 @@
                                         <th class="text-center">Location</th>
                                         <th class="text-center">Remarks</th>
                                     </tr>
-                                    
+
                                     <s:iterator value="demand.demandDetail" status="cnt" >
                                         <tr>
                                             <td>

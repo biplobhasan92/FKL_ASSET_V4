@@ -454,6 +454,11 @@
             <result name="success">/editDemandInput.jsp</result>
         </action>
         
+        <action name="deleteDemandInput" class="com.fk.action.DemandAction" method="gotoDeleteDemandInput">
+            <result name="success">/demandList.jsp</result>
+            <result name="fail">/editDemandInput.jsp</result>
+        </action>
+        
         <action name="editDemandNote" class="com.fk.action.DemandAction" method="editDemandNote"> 
             <result name="success" type="redirectAction">getAllDemand</result>
             <result name="fail">/editDemandInput.jsp</result>

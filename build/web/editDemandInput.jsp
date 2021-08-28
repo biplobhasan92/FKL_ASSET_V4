@@ -100,8 +100,16 @@
                 var remCol = document.createElement("input");
                 remCol.type= "text";
                 remCol.className ="form-control";
-                remCol.name="demand.demandDetail["+(rowCount-1)+"].remarks";
+                remCol.name="demand.demandDetail["+(rowCount-1)+"].status";
                 cell8.appendChild(remCol);
+                
+                
+                var cell9  = row.insertCell(9);
+                var remCol = document.createElement("input");
+                remCol.type= "text";
+                remCol.className ="form-control";
+                remCol.name="demand.demandDetail["+(rowCount-1)+"].remarks";
+                cell9.appendChild(remCol);
                 
                 return false;
             }  
@@ -138,7 +146,7 @@
                     <p id="message"></p>
                     <s:property value="message"/>
                 </div>
-                <br>                
+                <br>
             </div>
             
             <div class="form-div">
@@ -211,10 +219,12 @@
                                         <th class="text-center">Pcs</th>
                                         <th class="text-center">Parts No</th>
                                         <th class="text-center">Location</th>
+                                        <th class="text-center">Status</th>
                                         <th class="text-center">Remarks</th>
-                                    </tr>                                    
+                                    </tr>                             
 
                                     <s:iterator value="dList" status="cnt" >
+                                        <s:hidden name="demand.demandDetail[%{#cnt.count-1}].sl"  value="%{sl}" cssClass="form-control" />
                                         <tr>
                                             <td> </td>
                                             <td><s:textarea  rows="1" name="demand.demandDetail[%{#cnt.count-1}].description" value="%{description}" cssClass="form-control" /></td>
@@ -224,6 +234,7 @@
                                             <td><s:textfield name="demand.demandDetail[%{#cnt.count-1}].pcs" value="%{pcs}" cssClass="form-control" /></td>
                                             <td><s:textfield name="demand.demandDetail[%{#cnt.count-1}].partsNo" value="%{partsNo}" cssClass="form-control" /></td>
                                             <td><s:textfield name="demand.demandDetail[%{#cnt.count-1}].location" value="%{location}" cssClass="form-control" /></td>
+                                            <td><s:textfield name="demand.demandDetail[%{#cnt.count-1}].status" value="%{status}" cssClass="form-control" /></td>
                                             <td><s:textfield name="demand.demandDetail[%{#cnt.count-1}].remarks" value="%{remarks}" cssClass="form-control" /></td>
                                         </tr>
                                     </s:iterator>

@@ -30,6 +30,7 @@ public class DemandManagerImp implements DemandManager{
     private Connection con = null;
     private PreparedStatement pst = null;
     private List <DemandDetails> demandDetail;
+    private List <Demand> dBeansList;
     private DemandBean bean = null;
     private Demand demand;
     
@@ -72,7 +73,7 @@ public class DemandManagerImp implements DemandManager{
         try{ // Multiple Table ...........................            
             String saveDmndSub = "INSERT INTO demand_note_sub(ddn_no, description, brand, model, weight, pcs, partsno, location, remarks, status) VALUES(?,?,?,?,?,?,?,?,?,?)";
             pst = con.prepareStatement(saveDmndSub);
-            for (DemandDetails p : demandDetail){
+            for (DemandDetails p : demandDetail){                
                 pst.setInt(1, dBean.getDdn_no());
                 pst.setString(2, p.getDescription());
                 pst.setString(3, p.getBrand());
@@ -102,11 +103,111 @@ public class DemandManagerImp implements DemandManager{
     
     
     
+    
+    @Override
+    public boolean editDemand(DemandBean dBean){
+        
+        demandDetail = dBean.getDemandDetail();
+        con = DBconnection.getConnection();
+        
+        if(con==null){
+            return false;
+        }         
+        
+        // single table .............
+        try{
+            String saveDmnd
+                    =  " UPDATE\n" +
+                       "   demand_note\n" +
+                       " SET\n" +
+                       "   demandDate = ?,\n" +
+                       "   nameOfApplicant = ?,\n" +
+                       "   department = ?,\n" +
+                       "   desigWithId = ?,\n" +
+                       "   submitedTo = ?\n" +
+                       " WHERE\n" +
+                       "   ddn_no = ? ";
+            pst = con.prepareStatement(saveDmnd);
+            pst.setString(1, dBean.getDemandDate());
+            pst.setString(2, dBean.getNameOfApplicant());
+            pst.setString(3, dBean.getDepartment());
+            pst.setString(4, dBean.getDesigWithId());
+            pst.setString(5, dBean.getSubmitedTo());
+            pst.setInt(6, dBean.getDdn_no());
+            pst.addBatch();
+            pst.executeBatch();
+        }catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }finally{
+            try {
+                pst.close();
+            } catch (SQLException ex){
+                Logger.getLogger(DemandManagerImp.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        // single table .............
+        try{                 
+            String deleteSub = " DELETE \n"+
+                               " FROM  demand_note_sub \n"+
+                               " WHERE \n"+
+                               "   ddn_no = ? ";
+            pst = con.prepareStatement(deleteSub);
+            pst.setInt(1, dBean.getDdn_no());
+            pst.addBatch();
+            pst.executeBatch();
+        }catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }finally{
+            try {
+                pst.close();
+            } catch (SQLException ex){
+                Logger.getLogger(DemandManagerImp.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        try{ // Multiple Table ...........................            
+            String saveDmndSub = "INSERT INTO demand_note_sub(ddn_no, description, brand, model, weight, pcs, partsno, location, remarks, status) VALUES(?,?,?,?,?,?,?,?,?,?)";
+            pst = con.prepareStatement(saveDmndSub);
+            for (DemandDetails p : demandDetail){      
+                pst.setInt(1, dBean.getDdn_no());
+                pst.setString(2, p.getDescription());
+                pst.setString(3, p.getBrand());
+                pst.setString(4, p.getModel());
+                pst.setInt(5, p.getWeight());
+                pst.setInt(6, p.getPcs());
+                pst.setInt(7, p.getPartsNo());
+                pst.setString(8, p.getLocation());
+                pst.setString(9, p.getRemarks());
+                pst.setString(10, p.getStatus());
+                pst.addBatch();
+                pst.executeBatch();
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }finally{
+            try {
+                pst.close();
+            }catch (SQLException ex){
+                Logger.getLogger(DemandManagerImp.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return true;
+    }
+    
+    
+    
+    
     @Override
     public boolean saveDemandSub(DemandBean dBena) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
+    
     
     
     @Override
@@ -389,5 +490,29 @@ public class DemandManagerImp implements DemandManager{
         }
         return list;
     }
+    
+    
+    
+
+    @Override
+    public boolean deleteSingleDescription(int sl){ 
+        boolean b = false;        
+        try
+        {
+            con = DBconnection.getConnection();
+            if(con==null){return false;}
+            String sql = " Delete from demand_note_sub where sl = ? ";
+            pst = con.prepareStatement(sql);
+            pst.setInt(1, sl);
+            if(pst.executeUpdate()>0){b=true;}
+            pst.close();
+            con.close();   
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return b;
+    }
+
+    
     
 }

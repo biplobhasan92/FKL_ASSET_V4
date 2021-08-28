@@ -15,6 +15,8 @@ public class DemandDetails implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
+    
+    private int subSl;
     private String description;
     private String brand;
     private String model;
@@ -31,11 +33,11 @@ public class DemandDetails implements Serializable {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description){
         this.description = description;
     }
 
-    public String getBrand() {
+    public String getBrand(){
         return brand;
     }
 
@@ -79,12 +81,16 @@ public class DemandDetails implements Serializable {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(String location){
         this.location = location;
     }
 
     public String getStatus() {
         return status;
+    }
+
+    public int getSubSl() {
+        return subSl;
     }
 
     public void setStatus(String status) {

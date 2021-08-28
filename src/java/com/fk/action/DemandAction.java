@@ -172,13 +172,56 @@ public class DemandAction extends ActionSupport implements ModelDriven<Demand>{ 
     }
     
     
-    
+    public String editDemandNote(){
+        
+        demand = getDemand();            
+        demandDetail = demand.getDemandDetail();
+        
+        if(demand.getDdn_no() <= 0){
+            demand.setMessage("Enter ID");
+            return  "fail";
+        }
+        
+        if(demand.getDemandDate()== null || demand.getDemandDate().trim().isEmpty()){
+            demand.setMessage(" Select Date ");
+            return  "fail";
+        }
+        
+        if(demand.getSubmitedTo()== null || demand.getSubmitedTo().trim().isEmpty()){
+            demand.setMessage(" Select Date ");
+            return  "fail";
+        }
+        
+        try{
+            if(dmnManager.editDemand(demand)){
+                return SUCCESS;
+            }else{
+                return "fail";
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return SUCCESS;
+    }
     
     public String gotoEditDemandInput(){
         demand = dmnManager.getDemandBean(d.getDdn_no());
         dList  = dmnManager.getSingleDemand(d.getDdn_no());
         return SUCCESS;
     }
+    
+    
+    
+    public String gotoDeleteDemandInput(){
+        if(dmnManager.deleteSingleDescription(d.getSl()))
+        {
+            dList = dmnManager.getAllDemand();
+            return SUCCESS;
+        }else{
+            return "fail";   
+        }
+    }
+    
     
     
     public String getAllDescription(){
