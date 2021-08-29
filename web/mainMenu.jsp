@@ -65,7 +65,7 @@
                             <s:a cssClass="nav-link dropdown-item" href="%{openHisReport}">History</s:a>
                             <s:if test="%{#session.emp_id=='012032' || #session.emp_id=='012007' || #session.emp_id=='012008' || #session.emp_id=='012022'}">
                                 <s:a cssClass="nav-link dropdown-item" href="%{log_history}">Log History</s:a>
-                            </s:if>      
+                            </s:if>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -80,8 +80,8 @@
                             <%--
                                 <s:a cssClass="nav-link dropdown-item" href="%{gotoDescription}" > Add Description </s:a>
                             --%>
-                            <s:a cssClass="nav-link dropdown-item" href="%{gotoDemandInputForm}" >Demand Input</s:a>
-                            <s:a cssClass="nav-link dropdown-item" href="%{getAllDemand}" >Demand List</s:a>
+                            <s:a cssClass="nav-link dropdown-item" href="%{gotoDemandInputForm}" >Demand/Return Input</s:a>
+                            <s:a cssClass="nav-link dropdown-item" href="%{getAllDemand}" >Demand/Return List</s:a>
                             <%--
                                 <s:a cssClass="nav-link dropdown-item" href="%{testAction}" >Test</s:a> 
                             --%>

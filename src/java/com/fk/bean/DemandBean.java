@@ -25,6 +25,7 @@ public class DemandBean implements Serializable {
     private String department;
     private String desigWithId;
     private String submitedTo;
+    private String type;
     private String message;
     private List<DemandDetails> demandDetail;
 
@@ -71,6 +72,16 @@ public class DemandBean implements Serializable {
         this.nameOfApplicant = nameOfApplicant;
     }
 
+    public String getType(){
+        return type;
+    }
+
+    public void setType(String type){
+        this.type = type;
+    }
+
+    
+    
     public String getDepartment() {
         return department;
     }
@@ -79,7 +90,7 @@ public class DemandBean implements Serializable {
         this.department = department;
     }
 
-    public String getDesigWithId() {
+    public String getDesigWithId(){
         return desigWithId;
     }
 

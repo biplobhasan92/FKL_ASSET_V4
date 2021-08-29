@@ -64,15 +64,17 @@
     </head>
     <body>
         <%@include file="mainMenu.jsp" %>
-        <div class='main'> <!--  main DIV is Start  -->      
+        <div class='main'> <!--  main DIV is Start  -->
             <div style="text-align: center;" class="form-title">
                 <div class="container-fluid">
-                    <div class="row">                        
+                    <div class="row">
                         <div class="col-lg-12">
                             <img src='images/fakir-logo.png' style="height: 115px; width: 230px;margin-left: 28px;"/>
                             <p>KAYEMPUR, FATULLAH, NARAYANGANJ</p>
-                            <h2><span style="border: 1px solid #000;font-weight: bold;padding: 5px;">Departmental Demand List</span></h2>
-                        </div>            
+                            <h2>
+                                <span style="border: 1px solid #000;font-weight: bold;padding: 5px;">Departmental Demand/Return List</span>
+                            </h2>
+                        </div>
                     </div>
                 </div>
                 <hr/>
@@ -80,20 +82,20 @@
                     <p id="message"></p>
                     <s:property value="message"/>
                 </div>
-                <br>                
+                <br>
             </div>
             <div class="container-fluid" style="width:95% !important">
                 <table id="myTable" class="display" style="width:100%">
                     <thead>
                         <tr>
-                            <th class="text-center">DDN</th>
+                            <th class="text-center">DDN/RTN</th>
                             <th class="text-center">Date</th>
                             <th class="text-center">Applicant</th>
                             <th class="text-center">Dept.</th>
                             <th class="text-center">Description</th>
                             <th class="text-center">Brand</th>
                             <th class="text-center">Model</th>
-                            <th class="text-center">Weight(K.G)</th>
+                            <th class="text-center">Type</th>
                             <th class="text-center">Pcs</th>
                             <th class="text-center">Parts No</th>
                             <th class="text-center">Location</th>
@@ -116,7 +118,8 @@
                                 <td><s:property value="description"/></td>
                                 <td><s:property value="brand"/></td>
                                 <td><s:property value="model"/></td>
-                                <td><s:property value="weight"/></td>
+                                <%--<td><s:property value="weight"/></td> --%>
+                                <td><s:property value="type"/></td>
                                 <td><s:property value="pcs"/></td>
                                 <td><s:property value="partsNo"/></td>
                                 <td><s:property value="location"/></td>                               
@@ -135,9 +138,11 @@
                                         <s:param name="sl" value="sl" />
                                         <s:param name="ddn_no" value="ddn_no" />
                                     </s:url>
-                                    <s:a href="%{deleteDemandInput}" cssClass="btn btn-light" onclick="return confirm('Do you want to Delete this records? ')">
-                                        Delete
-                                    </s:a>
+                                    <s:if test="%{#session.emp_id=='012016' || #session.emp_id=='012007' || #session.emp_id=='012008' || #session.emp_id=='012022'}">
+                                        <s:a href="%{deleteDemandInput}" cssClass="btn btn-light" onclick="return confirm('Do you want to Delete this records? ')">
+                                            Delete
+                                        </s:a>
+                                    </s:if>
                                 </td>
                             </tr>
                         </s:iterator>

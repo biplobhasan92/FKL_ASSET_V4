@@ -62,14 +62,14 @@ public class ReportAction implements ModelDriven<EmpBean>{
             // String reportOutPutPath = "/repository/fkl_asset_mgmt/jasperreport/jasperoutput"; //LINUX
             // webapps/inventory/MyReports/
             
-             String reportPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/MyReports";
-             String reportOutPutPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/jasperreport/jasperoutput"; //WINDOWS
+            String reportPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/MyReports";
+            String reportOutPutPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/jasperreport/jasperoutput"; //WINDOWS
             
             
             
             
-           // String reportPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/MyReports"; //linux
-           // String reportOutPutPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/jasperreport/jasperoutput"; //LINUX
+            // String reportPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/MyReports"; //linux
+            // String reportOutPutPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/jasperreport/jasperoutput"; //LINUX
             
             
             
@@ -203,9 +203,10 @@ public class ReportAction implements ModelDriven<EmpBean>{
             String id;
             if (eBean.getId().length() < 6) {             
                 id = StringUtils.leftPad(eBean.getId(), 6, "0");
-            } else {
+            }else{
                 id = eBean.getId();
             }
+            
             String mtype = null;
             int utype = 0;
             if ((eBean.getId().trim().isEmpty() == false)
@@ -282,11 +283,9 @@ public class ReportAction implements ModelDriven<EmpBean>{
                 res.setHeader("Content-Length", String.valueOf(file.length()));
                 res.setHeader("Content-Disposition", "inline; filename=\"emp10.pdf\"");
                 Files.copy(file.toPath(), res.getOutputStream());
-
                    //JasperViewer.viewReport(jp);
                 con.close();
-
-            } else {
+            }else{
 
                 if ((eBean.getIp().trim().isEmpty() == false) && (eBean.getFklid().trim().isEmpty())) {
                     mywheree = " mdata.ip='" + eBean.getIp() + "'";
@@ -324,7 +323,7 @@ public class ReportAction implements ModelDriven<EmpBean>{
                 OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput(reportOutPutPath+"/prnt10.pdf");
                 // Output
                 exporter.setExporterOutput(exporterOutput);
-             //JasperRunManager.runReportToPdf(jr, null, con);
+                //JasperRunManager.runReportToPdf(jr, null, con);
 
                 //
                 SimplePdfExporterConfiguration configuration = new SimplePdfExporterConfiguration();

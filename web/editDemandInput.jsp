@@ -30,8 +30,7 @@
         
         <script>
             
-            function addMorePassengerRow(tableID) {
-
+            function addMorePassengerRow(tableID){
                 var table = document.getElementById(tableID);
                 var rowCount = table.rows.length;
                 var row = table.insertRow(rowCount); // description.brand model weight pcs partsNo location remarks
@@ -103,7 +102,6 @@
                 remCol.name="demand.demandDetail["+(rowCount-1)+"].status";
                 cell8.appendChild(remCol);
                 
-                
                 var cell9  = row.insertCell(9);
                 var remCol = document.createElement("input");
                 remCol.type= "text";
@@ -168,6 +166,7 @@
                                 <s:textfield cssClass="form-control"  name="demand.demandDate" value="%{demand.demandDate}" />
                             </div>
                         </div>
+                            
                         <br/>
                         <div class="row">
                             <div class="col-lg-2">
@@ -184,8 +183,7 @@
                             </div>
                         </div>
 
-                        <br>
-
+                        <br/>
                         <div class="row">
                             <div class="col-lg-2">
                                 <label for="designation_with_id">
@@ -203,6 +201,23 @@
                             <div class="col-lg-4">
                                 <s:textfield value="%{demand.submitedTo}" cssClass="form-control" name="demand.submitedTo" required="true" />
                             </div>
+                        </div>
+                            
+                        <br/>
+                        
+                        <div class="row">                            
+                            <div class="col-lg-2">
+                                <label for="demand_type">
+                                    Type: <span style="color: red">*</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <s:textfield value="%{demand.type}" cssClass="form-control" name="demand.type" required="true" />
+                            </div>
+                            <div class="col-lg-2">
+                                <label for=""></label>
+                            </div>
+                            <div class="col-lg-4"></div>
                         </div>
                     </div>
                     <br>

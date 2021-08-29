@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/com/fk/bean/Demand.java</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/com/fk/manager/impl/DemandManagerImp.java</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/demandList.jsp</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/editDemandInput.jsp</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/com/fk/manager/DemandManager.java</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/jdbc.properties</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/struts.xml</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/com/fk/action/DemandAction.java</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/src/java/com/fk/bean/DemandBean.java</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/mainMenu.jsp</file>
+            <file>file:/F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/demandInput2.jsp</file>
+        </group>
     </open-files>
 </project-private>

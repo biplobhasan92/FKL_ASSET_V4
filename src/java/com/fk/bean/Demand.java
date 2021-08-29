@@ -35,6 +35,7 @@ public class Demand implements Serializable{
     private String location;
     private String status;
     private String remarks;
+    private String type;
     private List<Demand> dBeans;
     
     public int getDmndID(){
@@ -51,6 +52,14 @@ public class Demand implements Serializable{
 
     public void setDdn_no(int ddn_no){
         this.ddn_no = ddn_no;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getDemandDate(){

@@ -47,8 +47,8 @@ public class DemandManagerImp implements DemandManager{
         
         try{     // single table .............            
             String saveDmnd = " INSERT INTO "+
-                    "  demand_note(ddn_no, demandDate, nameOfApplicant, department, desigWithId, submitedTo) "+
-                  " VALUES(?,?,?,?,?,?) ";
+                    "  demand_note(ddn_no, demandDate, nameOfApplicant, department, desigWithId, submitedTo, type) "+
+                  " VALUES(?,?,?,?,?,?,?) ";
             pst = con.prepareStatement(saveDmnd);
             pst.setInt(1,dBean.getDdn_no());
             pst.setString(2, dBean.getDemandDate());
@@ -56,6 +56,7 @@ public class DemandManagerImp implements DemandManager{
             pst.setString(4, dBean.getDepartment());
             pst.setString(5, dBean.getDesigWithId());
             pst.setString(6, dBean.getSubmitedTo());
+            pst.setString(7, dBean.getType());
             pst.addBatch();
             pst.executeBatch();
         }catch(SQLException e){
@@ -73,7 +74,7 @@ public class DemandManagerImp implements DemandManager{
         try{ // Multiple Table ...........................            
             String saveDmndSub = "INSERT INTO demand_note_sub(ddn_no, description, brand, model, weight, pcs, partsno, location, remarks, status) VALUES(?,?,?,?,?,?,?,?,?,?)";
             pst = con.prepareStatement(saveDmndSub);
-            for (DemandDetails p : demandDetail){                
+            for (DemandDetails p : demandDetail){              
                 pst.setInt(1, dBean.getDdn_no());
                 pst.setString(2, p.getDescription());
                 pst.setString(3, p.getBrand());
@@ -117,15 +118,16 @@ public class DemandManagerImp implements DemandManager{
         // single table .............
         try{
             String saveDmnd
-                    =  " UPDATE\n" +
-                       "   demand_note\n" +
-                       " SET\n" +
+                    =  " UPDATE \n" +
+                       "   demand_note \n" +
+                       " SET \n" +
                        "   demandDate = ?,\n" +
                        "   nameOfApplicant = ?,\n" +
-                       "   department = ?,\n" +
+                       "   department  = ?,\n" +
                        "   desigWithId = ?,\n" +
-                       "   submitedTo = ?\n" +
-                       " WHERE\n" +
+                       "   submitedTo  = ?,\n" +
+                       "   type  = ? \n" +
+                       " WHERE \n" +
                        "   ddn_no = ? ";
             pst = con.prepareStatement(saveDmnd);
             pst.setString(1, dBean.getDemandDate());
@@ -133,7 +135,8 @@ public class DemandManagerImp implements DemandManager{
             pst.setString(3, dBean.getDepartment());
             pst.setString(4, dBean.getDesigWithId());
             pst.setString(5, dBean.getSubmitedTo());
-            pst.setInt(6, dBean.getDdn_no());
+            pst.setString(6, dBean.getType());
+            pst.setInt(7, dBean.getDdn_no());
             pst.addBatch();
             pst.executeBatch();
         }catch(SQLException e){
@@ -169,9 +172,9 @@ public class DemandManagerImp implements DemandManager{
         }
         
         try{ // Multiple Table ...........................            
-            String saveDmndSub = "INSERT INTO demand_note_sub(ddn_no, description, brand, model, weight, pcs, partsno, location, remarks, status) VALUES(?,?,?,?,?,?,?,?,?,?)";
+            String saveDmndSub = "INSERT INTO demand_note_sub(ddn_no, description, brand, model, weight, pcs, partsno, location, remarks, status, type) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             pst = con.prepareStatement(saveDmndSub);
-            for (DemandDetails p : demandDetail){      
+            for (DemandDetails p : demandDetail){   
                 pst.setInt(1, dBean.getDdn_no());
                 pst.setString(2, p.getDescription());
                 pst.setString(3, p.getBrand());
@@ -182,6 +185,7 @@ public class DemandManagerImp implements DemandManager{
                 pst.setString(8, p.getLocation());
                 pst.setString(9, p.getRemarks());
                 pst.setString(10, p.getStatus());
+                pst.setString(11, dBean.getType());
                 pst.addBatch();
                 pst.executeBatch();
             }
@@ -250,6 +254,7 @@ public class DemandManagerImp implements DemandManager{
                 d.setLocation(rs.getString("location"));
                 d.setStatus(rs.getString("status"));
                 d.setRemarks(rs.getString("remarks"));
+                d.setType(rs.getString("type"));
                 demands.add(d);
             }
             rs.close();
@@ -305,6 +310,7 @@ public class DemandManagerImp implements DemandManager{
                 d.setLocation(rs.getString("location"));
                 d.setStatus(rs.getString("status"));
                 d.setRemarks(rs.getString("remarks"));
+                d.setType(rs.getString("type"));
                 demands.add(d);
             }
             rs.close();
@@ -338,6 +344,7 @@ public class DemandManagerImp implements DemandManager{
                 bean.setNameOfApplicant(rs.getString("nameOfApplicant"));
                 bean.setDesigWithId(rs.getString("desigWithId"));
                 bean.setSubmitedTo(rs.getString("submitedTo"));
+                bean.setType(rs.getString("type"));
             }
             rs.close();
             pst.close();

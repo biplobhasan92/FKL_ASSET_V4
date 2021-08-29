@@ -160,7 +160,7 @@
                             <p>KAYEMPUR, FATULLAH, NARAYANGANJ</p>
                             <h2>
                                 <span style="border: 1px solid #000;font-weight: bold;padding: 5px;">
-                                    Departmental Demand List
+                                    Departmental Demand/Return List
                                 </span>
                             </h2>
                         </div>
@@ -180,7 +180,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2">
-                                <label for="ddn_no">DDN No:<span style="color: red">*</span> </label>
+                                <label for="ddn_no">DDN/RTN No:<span style="color: red">*</span> </label>
                             </div>
                             <div class="col-lg-4">
                                 <s:textfield cssClass="form-control" name="demand.ddn_no" onkeypress="isNumber(this.value, this.id)" />
@@ -222,14 +222,36 @@
                             </div>
                             <div class="col-lg-2">
                                 <label for="demand_to">
-                                    Demand Submitted to:<span style="color: red">*</span>
+                                    Demand/Return Submitted to:<span style="color: red">*</span>
                                 </label>
                             </div>
                             <div class="col-lg-4">
-                                <s:select list="{'Accessories Store', 'Spare Parts'}" name="demand.submitedTo" required="true" id="mtype" headerValue=" --Select Type-- " cssClass="form-control">
+                                <s:select list="{'Accessories Store', 'Spare Parts'}" name="demand.submitedTo" required="true" id="mtype" headerValue=" --Select-- " cssClass="form-control">
                                     
                                 </s:select>
                             </div>                             
+                        </div>
+                            
+                        <br>
+                        
+                        <div class="row">                            
+                            <div class="col-lg-2">
+                                <label for="demand_type">
+                                    Type: <span style="color: red">*</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <s:select list="{'Demand', 'Return'}" name="demand.type" required="true" id="demand_type" headerValue=" --Select Type-- " cssClass="form-control"></s:select>
+                            </div>
+                            
+                            <div class="col-lg-2">
+                                <label for="">
+
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                
+                            </div>
                         </div>
                     </div>
                     <br>
