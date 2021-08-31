@@ -62,14 +62,14 @@ public class ReportAction implements ModelDriven<EmpBean>{
             // String reportOutPutPath = "/repository/fkl_asset_mgmt/jasperreport/jasperoutput"; //LINUX
             // webapps/inventory/MyReports/
             
-            String reportPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/MyReports";
-            String reportOutPutPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/jasperreport/jasperoutput"; //WINDOWS
+            // String reportPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/MyReports";
+            // String reportOutPutPath = "F:/FKL_Project_Workspaces/Project_WorkSpace_NetBeans/FKL_Asset_Management/FKL_ASSET_V4/web/jasperreport/jasperoutput"; //WINDOWS
             
             
             
             
-            // String reportPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/MyReports"; //linux
-            // String reportOutPutPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/jasperreport/jasperoutput"; //LINUX
+            String reportPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/MyReports"; //linux
+            String reportOutPutPath = "/usr/share/apache-tomcat-9.0.31/webapps/FKL_ASSET_V4/jasperreport/jasperoutput"; //LINUX
             
             
             
